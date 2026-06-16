@@ -28,6 +28,12 @@
     -webkit-font-smoothing:antialiased;
   }
 
+  html{scroll-behavior:smooth;}
+
+  @media (prefers-reduced-motion: reduce){
+    html{scroll-behavior:auto;}
+  }
+
   /* ---------- fixed background layers (swap on scroll) ---------- */
   .bg-layers{
     position:fixed;
@@ -96,6 +102,36 @@
 
   body.scrolled .bg-layer--default{opacity:0;}
   body.scrolled .bg-layer--scroll{opacity:1;}
+
+  .bg-layer--about{
+    opacity:0;
+    background:
+      radial-gradient(ellipse 75% 65% at 50% 42%, rgba(2,245,161,0.06), transparent 68%),
+      var(--bg);
+  }
+
+  .bg-layer--about .bg-about{
+    position:absolute;
+    inset:0;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    overflow:hidden;
+  }
+
+  .bg-layer--about .bg-about img{
+    width:min(720px, 65vw);
+    height:auto;
+    object-fit:contain;
+    opacity:0.48;
+    mix-blend-mode:screen;
+    filter:hue-rotate(88deg) saturate(1.15) brightness(1.05);
+    -webkit-mask-image:radial-gradient(ellipse 62% 72% at 50% 46%, black 28%, transparent 90%);
+    mask-image:radial-gradient(ellipse 62% 72% at 50% 46%, black 28%, transparent 90%);
+  }
+
+  body.at-about .bg-layer--scroll{opacity:0;}
+  body.at-about .bg-layer--about{opacity:1;}
 
   /* ---------- grid overlay ---------- */
   .grid-overlay{
@@ -739,7 +775,7 @@
 </head>
 <body>
 
-<!-- Background layers: faint ghost → full headset on scroll -->
+<!-- Background layers: faint ghost → full headset → about image on scroll -->
 <div class="bg-layers" aria-hidden="true">
   <div class="bg-layer bg-layer--default">
     <div class="bg-ghost">
@@ -749,6 +785,11 @@
   <div class="bg-layer bg-layer--scroll">
     <div class="bg-full">
       <img src="assets/hero-headset.png" alt="">
+    </div>
+  </div>
+  <div class="bg-layer bg-layer--about">
+    <div class="bg-about">
+      <img src="assets/about-bg.png" alt="">
     </div>
   </div>
 </div>
@@ -919,25 +960,40 @@
   const links = document.getElementById('navLinks');
   toggle.addEventListener('click', () => links.classList.toggle('open'));
 
-  // background swap on scroll: faint ghost → full headset image
+  // background swap on scroll: ghost → headset → about image
   (function(){
     const hero = document.getElementById('hero');
+    const about = document.getElementById('about');
     if(!hero) return;
 
-    const threshold = hero.offsetHeight * 0.35;
+    let heroThreshold = 0;
+    let aboutThreshold = Infinity;
     let ticking = false;
+
+    function measure(){
+      heroThreshold = hero.offsetHeight * 0.35;
+      if(about){
+        const top = about.getBoundingClientRect().top + window.scrollY;
+        aboutThreshold = top - window.innerHeight * 0.42;
+      }
+    }
 
     function onScroll(){
       if(!ticking){
         requestAnimationFrame(() => {
-          document.body.classList.toggle('scrolled', window.scrollY > threshold);
+          const y = window.scrollY;
+          document.body.classList.toggle('scrolled', y > heroThreshold);
+          document.body.classList.toggle('at-about', about && y > aboutThreshold);
           ticking = false;
         });
         ticking = true;
       }
     }
 
+    measure();
     window.addEventListener('scroll', onScroll, {passive:true});
+    window.addEventListener('resize', measure);
+    window.addEventListener('load', measure);
     onScroll();
   })();
 
