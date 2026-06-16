@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pentalogic — Our Services</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+
+<!-- Background layers -->
+<div class="bg-layers" aria-hidden="true">
+  <div class="bg-layer bg-layer--default">
+    <div class="bg-ghost">
+      <img src="assets/images/hero-headset.png" alt="">
+    </div>
+  </div>
+  <div class="bg-layer bg-layer--scroll">
+    <div class="bg-full">
+      <img src="assets/images/hero-headset.png" alt="">
+    </div>
+  </div>
+</div>
+<div class="grid-overlay"></div>
+<div class="grid-spotlight" id="gridSpotlight"></div>
+<div class="vignette"></div>
+
+<div class="page">
+  <!-- Hero -->
+  <section class="hero" id="hero">
+    <nav>
+      <a href="index.html" class="logo">
+        <span class="logo-dot"></span>
+        Pentalogic
+      </a>
+      <ul class="nav-links">
+        <li><a href="services.html" style="color:var(--white);">Services</a></li>
+        <li><a href="index.html#about">About</a></li>
+        <li><a href="#">Insights</a></li>
+        <li><a href="index.html#contact">Contact</a></li>
+      </ul>
+      <button class="nav-cta">Request a quote</button>
+    </nav>
+
+    <div class="hero-grid">
+      <div class="hero-content">
+        <h1 class="fade-up" style="animation-delay:.1s">
+          Our <span class="accent">services</span>
+        </h1>
+        <p class="sub fade-up" style="animation-delay:.2s">
+          From strategy to execution — we deliver end-to-end data and technology solutions that drive real business outcomes.
+        </p>
+      </div>
+
+      <div class="hero-visual fade-up" style="animation-delay:.25s">
+        <div class="hero-visual-ring" aria-hidden="true"></div>
+        <div class="hero-chart" role="img" aria-label="Operational efficiency bar chart">
+          <svg viewBox="0 0 400 280" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <rect class="chart-panel" x="8" y="8" width="384" height="264" rx="12"/>
+            <g stroke="rgba(2,245,161,0.12)" stroke-width="1">
+              <line x1="48" y1="48" x2="352" y2="48" />
+              <line x1="48" y1="96" x2="352" y2="96" />
+              <line x1="48" y1="144" x2="352" y2="144" />
+              <line x1="48" y1="192" x2="352" y2="192" />
+              <line x1="48" y1="228" x2="352" y2="228" />
+            </g>
+            <g fill="var(--accent)">
+              <rect x="72" y="156" width="32" height="68" rx="8" opacity="0.88" />
+              <rect x="140" y="118" width="32" height="106" rx="8" opacity="0.92" />
+              <rect x="208" y="92" width="32" height="132" rx="8" opacity="0.96" />
+              <rect x="276" y="68" width="32" height="156" rx="8" opacity="1" />
+            </g>
+            <line x1="48" y1="228" x2="352" y2="228" stroke="rgba(255,255,255,0.12)" stroke-width="2" />
+            <text x="72" y="249" fill="var(--muted-2)" font-family="IBM Plex Mono, monospace" font-size="10">Strategy</text>
+            <text x="140" y="249" fill="var(--muted-2)" font-family="IBM Plex Mono, monospace" font-size="10">Analytics</text>
+            <text x="208" y="249" fill="var(--muted-2)" font-family="IBM Plex Mono, monospace" font-size="10">Systems</text>
+            <text x="276" y="249" fill="var(--muted-2)" font-family="IBM Plex Mono, monospace" font-size="10">Software</text>
+            <text x="48" y="34" fill="var(--accent)" font-family="IBM Plex Mono, monospace" font-size="11" font-weight="500">Operational efficiency</text>
+          </svg>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services Detail -->
+  <section class="services-detail">
+    <div class="services-grid">
+      <!-- 1. Data Strategy -->
+      <article class="service-card fade-up" style="animation-delay:.15s">
+        <span class="service-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="18" y1="20" x2="18" y2="10"/>
+            <line x1="12" y1="20" x2="12" y2="4"/>
+            <line x1="6" y1="20" x2="6" y2="14"/>
+          </svg>
+        </span>
+        <h3>Data Strategy</h3>
+        <p class="description">
+          Turn raw data into a competitive advantage. We define the roadmap to capture, store, and leverage your data assets for maximum business impact.
+        </p>
+        <ul class="offerings">
+          <li>Data maturity assessments & gap analysis</li>
+          <li>Data governance & architecture design</li>
+          <li>Roadmap planning & implementation strategy</li>
+        </ul>
+        <a href="#" class="service-link">Explore Data Strategy</a>
+      </article>
+
+      <!-- 2. Predictive Analytics -->
+      <article class="service-card fade-up" style="animation-delay:.2s">
+        <span class="service-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="22 7 13.5 15.5 8.5 10.5 2 17"/>
+            <polyline points="16 7 22 7 22 13"/>
+          </svg>
+        </span>
+        <h3>Predictive Analytics</h3>
+        <p class="description">
+          Anticipate the future with confidence. We build advanced AI and machine learning models that predict behavior, optimise operations, and reduce risk.
+        </p>
+        <ul class="offerings">
+          <li>Custom ML model development & deployment</li>
+          <li>Customer churn, demand, and risk forecasting</li>
+          <li>Real-time anomaly detection & alerting</li>
+        </ul>
+        <a href="#" class="service-link">Explore Predictive Analytics</a>
+      </article>
+
+      <!-- 3. Data Systems -->
+      <article class="service-card fade-up" style="animation-delay:.25s">
+        <span class="service-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
+            <ellipse cx="12" cy="5" rx="9" ry="3"/>
+            <path d="M3 5v14a9 3 0 0 0 18 0V5"/>
+            <path d="M3 12a9 3 0 0 0 18 0"/>
+          </svg>
+        </span>
+        <h3>Data Systems</h3>
+        <p class="description">
+          Build the backbone of your data-driven future. We design and implement scalable, secure data pipelines that ensure your data is always ready and reliable.
+        </p>
+        <ul class="offerings">
+          <li>Data pipeline & ETL/ELT architecture</li>
+          <li>Cloud data warehousing (Snowflake, BigQuery, etc.)</li>
+          <li>Data integration & API orchestration</li>
+        </ul>
+        <a href="#" class="service-link">Explore Data Systems</a>
+      </article>
+
+      <!-- 4. Custom Software -->
+      <article class="service-card fade-up" style="animation-delay:.3s">
+        <span class="service-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="2" y="3" width="20" height="14" rx="2"/>
+            <line x1="8" y1="21" x2="16" y2="21"/>
+            <line x1="12" y1="17" x2="12" y2="21"/>
+            <polyline points="8 9 10 11 8 13"/>
+            <polyline points="16 9 14 11 16 13"/>
+            <line x1="12" y1="9" x2="12" y2="13"/>
+          </svg>
+        </span>
+        <h3>Custom Software</h3>
+        <p class="description">
+          Built for your unique challenges. From MVPs to enterprise platforms, we engineer digital products that solve specific problems and scale seamlessly.
+        </p>
+        <ul class="offerings">
+          <li>Full-stack web & mobile application development</li>
+          <li>API-first architecture & microservices</li>
+          <li>Legacy system modernisation & migration</li>
+        </ul>
+        <a href="#" class="service-link">Explore Custom Software</a>
+      </article>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer-section">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div class="logo">
+          <span class="logo-dot"></span>
+          Pentalogic
+        </div>
+        <p>Intelligence that sees first. Data, analytics, technology, and predictive intelligence consultancy.</p>
+      </div>
+      <div class="footer-col">
+        <h5>Services</h5>
+        <ul>
+          <li><a href="#">Data Strategy</a></li>
+          <li><a href="#">Predictive Analytics</a></li>
+          <li><a href="#">Data Systems</a></li>
+          <li><a href="#">Custom Software</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h5>Resources</h5>
+        <ul>
+          <li><a href="#">Insights</a></li>
+          <li><a href="#">Case Studies</a></li>
+          <li><a href="#">Blog</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h5>Legal</h5>
+        <ul>
+          <li><a href="#">Privacy Policy</a></li>
+          <li><a href="#">Terms of Service</a></li>
+          <li><a href="#">Cookies</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>&copy; 2026 Pentalogic Consultancy. All rights reserved.</span>
+      <div class="legal-links">
+        <a href="#">Privacy Policy</a>
+        <a href="#">Terms of Service</a>
+      </div>
+    </div>
+  </footer>
+</div>
+
+<script src="assets/js/main.js"></script>
+</body>
+</html>
