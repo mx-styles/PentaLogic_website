@@ -20,6 +20,18 @@ The website should:
 - Include basic SEO, legal pages, and a working contact page.
 
 ---
+## Technology Stack
+
+This project will use the following technology stack:
+
+- Next.js for the website framework
+- React for building user interface components
+- TypeScript for safer and cleaner code
+- Tailwind CSS for styling and responsive design
+- MDX/Markdown for blog and insight content
+- GitHub for version control and issue tracking
+- Vercel for deployment and preview links
+- Next.js Metadata API for SEO
 
 ## Team Members and Roles
 
