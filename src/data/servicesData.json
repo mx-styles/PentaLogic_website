@@ -1,0 +1,22 @@
+{
+  "data-strategy": {
+    "title": "Data Strategy",
+    "tagline": "Navigate complexity with confidence.",
+    "description": "We define the roadmap to capture, store, and leverage your data assets for maximum business impact."
+  },
+  "predictive-analytics": {
+    "title": "Predictive Analytics",
+    "tagline": "Anticipate what comes next.",
+    "description": "Deploy machine learning models to forecast outcomes, model customer behaviour, and optimize processes."
+  },
+  "data-systems": {
+    "title": "Data Systems",
+    "tagline": "Robust infrastructure for real-time intelligence.",
+    "description": "Design and build data systems, databases, and pipelines that are secure, reliable, and scaleable."
+  },
+  "custom-software": {
+    "title": "Custom Software",
+    "tagline": "Bespoke digital products engineered to scale.",
+    "description": "We develop custom software, SaaS products, APIs, and dashboard systems aligned with your operational needs."
+  }
+}
