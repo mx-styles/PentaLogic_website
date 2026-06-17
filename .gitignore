@@ -1,0 +1,40 @@
+# Local issue drafts
+github_issues_draft.md
+
+# Operating System files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# IDE configuration files
+.vscode/
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# Local logs
+agent_session.log
+*.log
+
+# Node dependencies and build outputs
+node_modules/
+jspm_packages/
+web_modules/
+dist/
+build/
+out/
+.docusaurus/
+.next/
+.serverless/
+.fusebox/
+.dynamodb/
+
+# Local env files
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
