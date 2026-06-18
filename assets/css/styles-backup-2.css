@@ -673,14 +673,6 @@ h1 .accent{
   box-shadow:0 12px 32px rgba(2,245,161,0.06);
 }
 
-.team-card--feature{
-  grid-column:1 / -1;
-}
-
-.team-card--feature .team-bio{
-  max-width:560px;
-}
-
 .team-avatar{
   flex-shrink:0;
   width:84px;
