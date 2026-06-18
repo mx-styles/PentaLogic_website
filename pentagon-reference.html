@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Rounded pentagon</title>
+<style>
+  :root {
+    --bg: #07191E;
+    --accent: #02F5A1;
+    --accent-soft: rgba(2,245,161,0.12);
+    --accent-border: rgba(2,245,161,0.28);
+    --white: #FFFFFF;
+    --muted: rgba(255,255,255,0.62);
+    --muted-2: rgba(255,255,255,0.38);
+  }
+
+  body {
+    margin: 0;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--bg);
+  }
+
+  .pentagon-wrap {
+    position: relative;
+    width: 420px;
+    height: 420px;
+  }
+
+  /* soft ambient glow behind the shapes */
+  .pentagon-wrap::before {
+    content: "";
+    position: absolute;
+    inset: -60px;
+    background: radial-gradient(circle, var(--accent-soft), transparent 70%);
+    filter: blur(12px);
+    z-index: 0;
+  }
+
+  svg {
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    overflow: visible;
+  }
+
+  .pentagon {
+    fill: none;
+    stroke-linejoin: round;
+  }
+
+  .pentagon--echo-2 { stroke: var(--accent); stroke-width: 1.1; stroke-opacity: 0.18; }
+  .pentagon--echo-1 { stroke: var(--accent); stroke-width: 1.5; stroke-opacity: 0.38; }
+  .pentagon--main   { stroke: var(--accent); stroke-width: 2.4; }
+</style>
+</head>
+<body>
+  <div class="pentagon-wrap">
+    <svg viewBox="0 0 200 200">
+      <!-- faintest, rotated counter-clockwise -->
+      <path class="pentagon pentagon--echo-2"
+            transform="rotate(-16 100 91.4)"
+            d="M 82.2 22.93 Q 100 10 117.8 22.93
+               L 167.8 59.26 Q 185.6 72.19 178.8 93.11
+               L 159.7 151.89 Q 152.9 172.81 130.9 172.81
+               L 69.1 172.81 Q 47.1 172.81 40.3 151.89
+               L 21.2 93.11 Q 14.4 72.19 32.2 59.26 Z" />
+      <!-- mid layer, rotated clockwise -->
+      <path class="pentagon pentagon--echo-1"
+            transform="rotate(16 100 91.4)"
+            d="M 82.2 22.93 Q 100 10 117.8 22.93
+               L 167.8 59.26 Q 185.6 72.19 178.8 93.11
+               L 159.7 151.89 Q 152.9 172.81 130.9 172.81
+               L 69.1 172.81 Q 47.1 172.81 40.3 151.89
+               L 21.2 93.11 Q 14.4 72.19 32.2 59.26 Z" />
+      <!-- main, unrotated -->
+      <path class="pentagon pentagon--main"
+            d="M 82.2 22.93 Q 100 10 117.8 22.93
+               L 167.8 59.26 Q 185.6 72.19 178.8 93.11
+               L 159.7 151.89 Q 152.9 172.81 130.9 172.81
+               L 69.1 172.81 Q 47.1 172.81 40.3 151.89
+               L 21.2 93.11 Q 14.4 72.19 32.2 59.26 Z" />
+    </svg>
+  </div>
+</body>
+</html>

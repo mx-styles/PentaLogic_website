@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- SEO: Issue #24 -->
+  <title>About Us | Pentalogic Consultancy</title>
+  <meta name="description" content="Learn about Pentalogic — our story, mission, vision, core values, and the team dedicated to helping organisations make the most of their data." />
+  <meta name="keywords" content="about Pentalogic, data consultancy team, mission, vision, values" />
+  <link rel="canonical" href="/About.html" />
+
+  <!-- Open Graph -->
+  <meta property="og:type"        content="website" />
+  <meta property="og:url"         content="/About.html" />
+  <meta property="og:title"       content="About Us | Pentalogic Consultancy" />
+  <meta property="og:description" content="Learn about Pentalogic — our story, mission, vision, and the team enabling data-driven transformation." />
+  <meta property="og:site_name"   content="Pentalogic Consultancy" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/styles.css">
+  <link rel="stylesheet" href="assets/css/team-rotator.css">
+  <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body>
+
+<!-- Background layers -->
+<div class="bg-layers" aria-hidden="true">
+  <div class="bg-layer bg-layer--default">
+    <div class="bg-ghost">
+      <img src="assets/images/hero-headset.png" alt="">
+    </div>
+  </div>
+  <div class="bg-layer bg-layer--scroll">
+    <div class="bg-full">
+      <img src="assets/images/hero-headset.png" alt="">
+    </div>
+  </div>
+  <div class="bg-layer bg-layer--about">
+    <div class="bg-about">
+      <img src="assets/images/about-bg.png" alt="">
+    </div>
+  </div>
+</div>
+<div class="grid-overlay"></div>
+<div class="grid-spotlight" id="gridSpotlight"></div>
+<div class="vignette"></div>
+
+<div class="page">
+  <!-- Hero -->
+  <section class="hero" id="hero">
+    <nav>
+      <a href="index.html" class="logo">
+        <span class="logo-dot"></span>
+        Pentalogic
+      </a>
+      <ul class="nav-links">
+        <li><a href="Services.html">Services</a></li>
+        <li><a href="About.html" style="color:var(--white);">About</a></li>
+        <li><a href="#">Insights</a></li>
+        <li><a href="index.html#contact">Contact</a></li>
+      </ul>
+      <button class="nav-cta">Request a quote</button>
+    </nav>
+
+    <div class="hero-grid">
+      <div class="hero-content">
+        <h1 class="fade-up" style="animation-delay:.1s">
+          Our <span class="accent">story.</span>
+        </h1>
+        <p class="sub fade-up" style="animation-delay:.2s">
+          Built to make data work for everyone. A consultancy founded on rigour, transparency, and results.
+        </p>
+      </div>
+
+      <div class="hero-visual fade-up" style="animation-delay:.25s">
+        <div class="hero-visual-ring" aria-hidden="true"></div>
+        <div class="hero-chart" role="img" aria-label="Team growth placeholder">
+          <svg viewBox="0 0 400 280" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <rect class="chart-panel" x="8" y="8" width="384" height="264" rx="12"/>
+            <path class="chart-line" d="M48,228 L120,180 L200,190 L280,120 L352,60" fill="none" stroke="var(--accent)" stroke-width="2.5" />
+            <text x="48" y="34" fill="var(--accent)" font-family="IBM Plex Mono, monospace" font-size="11" font-weight="500">Capability growth</text>
+          </svg>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Detail -->
+  <section class="about-detail">
+    <div class="about-section">
+      <p class="section-label">Who We Are</p>
+      <h2>A Consultancy Built on <span class="highlight">Rigour and Results</span></h2>
+      <p class="about-lead">
+        Pentalogic Consultancy was established to bridge a persistent gap in the market: organisations drowning in data but starved of actionable insight.
+      </p>
+
+      <div class="about-grid">
+        <div class="about-copy">
+          <p>
+            Too often, businesses invest in expensive tools without a clear strategy, hire analysts without the infrastructure to support them, or commission software that doesn't align with how they actually work.
+          </p>
+          <p>
+            We founded Pentalogic to be different. We are practitioners first — engineers, analysts, and strategists who have worked inside complex data environments and understand what it actually takes to make data deliver.
+          </p>
+        </div>
+
+        <div class="about-pillars">
+          <article class="about-pillar">
+            <span class="about-pillar-label">Mission</span>
+            <h3>Empower with clarity</h3>
+            <p>To empower organisations with clear data strategies, intelligent systems, and purpose-built software.</p>
+          </article>
+          <article class="about-pillar">
+            <span class="about-pillar-label">Vision</span>
+            <h3>Trusted First</h3>
+            <p>To be the consultancy that data-driven organisations trust first — known for rigour and transparency.</p>
+          </article>
+        </div>
+      </div>
+
+      <!-- Values -->
+      <div class="about-values">
+        <div class="about-value">
+          <span class="about-value-num" aria-hidden="true"><i data-lucide="search"></i></span>
+          <p class="about-value-label">Rigour</p>
+          <p class="about-value-desc">Discipline in every analysis and line of code.</p>
+        </div>
+        <div class="about-value">
+          <span class="about-value-num" aria-hidden="true"><i data-lucide="message-circle"></i></span>
+          <p class="about-value-label">Transparency</p>
+          <p class="about-value-desc">Honest communication, even when it's difficult.</p>
+        </div>
+        <div class="about-value">
+          <span class="about-value-num" aria-hidden="true"><i data-lucide="handshake"></i></span>
+          <p class="about-value-label">Partnership</p>
+          <p class="about-value-desc">Working as a true extension of your team.</p>
+        </div>
+        <div class="about-value">
+          <span class="about-value-num" aria-hidden="true"><i data-lucide="rocket"></i></span>
+          <p class="about-value-label">Impact</p>
+          <p class="about-value-desc">Measuring success by what changes for your business.</p>
+        </div>
+      </div>
+
+      <!-- Team -->
+      <div class="team-block">
+        <p class="section-label">Meet The Team</p>
+        <h2>The People Behind <span class="highlight">Pentalogic</span></h2>
+        <p class="about-lead">
+          A small, senior team — no juniors learning on your dime, no hand-offs to someone you've never met. Each lead owns an engagement end to end.
+        </p>
+
+        <div class="team-rotator" id="teamRotator" role="group" aria-roledescription="carousel" aria-label="Team member spotlight">
+          <div class="team-rotator-visual">
+            <div class="pentagon-wrap" id="pentagonWrap">
+              <div class="pentagon-glow" aria-hidden="true"></div>
+
+              <svg class="pentagon-svg" viewBox="0 0 200 200" aria-hidden="true">
+                <g id="pentagonSpin">
+                  <path class="pentagon-path pentagon-path--echo-2"
+                        transform="rotate(-16 100 91.4)"
+                        d="M 82.2 22.93 Q 100 10 117.8 22.93
+                           L 167.8 59.26 Q 185.6 72.19 178.8 93.11
+                           L 159.7 151.89 Q 152.9 172.81 130.9 172.81
+                           L 69.1 172.81 Q 47.1 172.81 40.3 151.89
+                           L 21.2 93.11 Q 14.4 72.19 32.2 59.26 Z" />
+                  <path class="pentagon-path pentagon-path--echo-1"
+                        transform="rotate(16 100 91.4)"
+                        d="M 82.2 22.93 Q 100 10 117.8 22.93
+                           L 167.8 59.26 Q 185.6 72.19 178.8 93.11
+                           L 159.7 151.89 Q 152.9 172.81 130.9 172.81
+                           L 69.1 172.81 Q 47.1 172.81 40.3 151.89
+                           L 21.2 93.11 Q 14.4 72.19 32.2 59.26 Z" />
+                  <path class="pentagon-path pentagon-path--main"
+                        d="M 82.2 22.93 Q 100 10 117.8 22.93
+                           L 167.8 59.26 Q 185.6 72.19 178.8 93.11
+                           L 159.7 151.89 Q 152.9 172.81 130.9 172.81
+                           L 69.1 172.81 Q 47.1 172.81 40.3 151.89
+                           L 21.2 93.11 Q 14.4 72.19 32.2 59.26 Z" />
+                </g>
+              </svg>
+
+              <span class="pentagon-marker" id="pentagonMarker" aria-hidden="true"></span>
+
+              <div class="team-photo-ring" aria-hidden="true"></div>
+
+              <div class="team-photo-frame">
+                <img class="team-photo" id="teamPhotoA" src="assets/images/Darwen.png" alt="" aria-hidden="true">
+                <img class="team-photo" id="teamPhotoB" src="assets/images/Darwen.png" alt="" aria-hidden="true">
+              </div>
+            </div>
+
+            <div class="team-rotator-dots" id="teamDots" role="tablist" aria-label="Choose team member"></div>
+          </div>
+
+          <div class="team-rotator-info">
+            <div class="team-rotator-meta">
+              <span class="team-rotator-count" id="teamCount">01 / 05</span>
+              <div class="team-rotator-nav">
+                <button type="button" class="team-rotator-btn" id="teamPrev" aria-label="Previous team member">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M15 18l-6-6 6-6"/></svg>
+                </button>
+                <button type="button" class="team-rotator-btn" id="teamNext" aria-label="Next team member">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18l6-6-6-6"/></svg>
+                </button>
+              </div>
+            </div>
+
+            <div class="team-rotator-card" id="teamCard">
+              <h3><span class="team-first" id="teamFirst">Priya</span><span class="team-last" id="teamLast">Anand</span></h3>
+              <span class="highlight team-role" id="teamRole">Founder &amp; Lead Strategist</span>
+              <p class="team-bio" id="teamBio">Fifteen years inside data platforms taught her that strategy without infrastructure is just a slide deck. Leads every engagement from kickoff to handover.</p>
+              <div class="team-links">
+                <a href="#" aria-label="Priya Anand on LinkedIn" id="teamLinkedIn">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-4 0v7h-4V9h4v1.5A6 6 0 0 1 16 8Z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+                </a>
+                <a href="#" aria-label="Email Priya Anand" id="teamEmail">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m2 6 10 7L22 6"/></svg>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer-section">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div class="logo">
+          <span class="logo-dot"></span>
+          Pentalogic
+        </div>
+        <p>Intelligence that sees first. Data, analytics, technology, and predictive intelligence consultancy.</p>
+      </div>
+      <div class="footer-col">
+        <h5>Services</h5>
+        <ul>
+          <li><a href="Data-Strategy.html">Data Strategy</a></li>
+          <li><a href="Predictive-Analytics.html">Predictive Analytics</a></li>
+          <li><a href="Data-Systems.html">Data Systems</a></li>
+          <li><a href="Custom-Software.html">Custom Software</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h5>Resources</h5>
+        <ul>
+          <li><a href="#">Insights</a></li>
+          <li><a href="#">Case Studies</a></li>
+          <li><a href="#">Blog</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h5>Legal</h5>
+        <ul>
+          <li><a href="Privacy-Policy.html">Privacy Policy</a></li>
+          <li><a href="Terms-of-Service.html">Terms of Service</a></li>
+          <li><a href="#">Cookies</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>&copy; 2026 Pentalogic Consultancy. All rights reserved.</span>
+      <div class="legal-links">
+        <a href="Privacy-Policy.html">Privacy Policy</a>
+        <a href="Terms-of-Service.html">Terms of Service</a>
+      </div>
+    </div>
+  </footer>
+</div>
+
+<script src="assets/js/main.js"></script>
+<script src="assets/js/team-rotator.js"></script>
+<script>lucide.createIcons();</script>
+</body>
+</html>
