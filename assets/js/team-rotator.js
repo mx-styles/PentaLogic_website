@@ -31,31 +31,31 @@ document.addEventListener('DOMContentLoaded', () => {
       first: 'Priya', last: 'Anand',
       role: 'Founder & Lead Strategist',
       bio: 'Fifteen years inside data platforms taught her that strategy without infrastructure is just a slide deck. Leads every engagement from kickoff to handover.',
-      img: 'assets/images/Darwen.png', linkedin: '#', email: '#'
+      img: 'assets/images/profile1.png', linkedin: '#', email: '#'
     },
     {
       first: 'Marcus', last: 'Webb',
       role: 'Head of Predictive Analytics',
       bio: 'Builds the forecasting models that turn historical noise into decisions your team can actually act on.',
-      img: 'assets/images/Darwen.png', linkedin: '#', email: '#'
+      img: 'assets/images/profile2.png', linkedin: '#', email: '#'
     },
     {
       first: 'Sofia', last: 'Lindqvist',
       role: 'Head of Data Systems',
       bio: 'Designs the pipelines and architecture that keep data moving — reliably, securely, at scale.',
-      img: 'assets/images/Darwen.png', linkedin: '#', email: '#'
+      img: 'assets/images/profile3.png', linkedin: '#', email: '#'
     },
     {
       first: 'Daniel', last: 'Osei',
       role: 'Principal Software Engineer',
       bio: 'Ships the custom tools and internal platforms that make the strategy usable day to day.',
-      img: 'assets/images/Darwen.png', linkedin: '#', email: '#'
+      img: 'assets/images/profile4.png', linkedin: '#', email: '#'
     },
     {
       first: 'Lena', last: 'Ferreira',
       role: 'Head of Insights & Research',
       bio: "Turns engagement findings into the published research and case studies that keep clients ahead of what's coming next.",
-      img: 'assets/images/Darwen.png', linkedin: '#', email: '#'
+      img: 'assets/images/profile5.png', linkedin: '#', email: '#'
     }
   ];
 
