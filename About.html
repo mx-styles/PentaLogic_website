@@ -21,6 +21,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="assets/css/styles.css">
   <link rel="stylesheet" href="assets/css/team-rotator.css">
+  <script src="https://unpkg.com/lucide@latest"></script>
 </head>
 <body>
 
@@ -122,22 +123,22 @@
       <!-- Values -->
       <div class="about-values">
         <div class="about-value">
-          <span class="about-value-num">🔍</span>
+          <span class="about-value-num" aria-hidden="true"><i data-lucide="search"></i></span>
           <p class="about-value-label">Rigour</p>
           <p class="about-value-desc">Discipline in every analysis and line of code.</p>
         </div>
         <div class="about-value">
-          <span class="about-value-num">💬</span>
+          <span class="about-value-num" aria-hidden="true"><i data-lucide="message-circle"></i></span>
           <p class="about-value-label">Transparency</p>
           <p class="about-value-desc">Honest communication, even when it's difficult.</p>
         </div>
         <div class="about-value">
-          <span class="about-value-num">🤝</span>
+          <span class="about-value-num" aria-hidden="true"><i data-lucide="handshake"></i></span>
           <p class="about-value-label">Partnership</p>
           <p class="about-value-desc">Working as a true extension of your team.</p>
         </div>
         <div class="about-value">
-          <span class="about-value-num">🚀</span>
+          <span class="about-value-num" aria-hidden="true"><i data-lucide="rocket"></i></span>
           <p class="about-value-label">Impact</p>
           <p class="about-value-desc">Measuring success by what changes for your business.</p>
         </div>
@@ -274,5 +275,6 @@
 
 <script src="assets/js/main.js"></script>
 <script src="assets/js/team-rotator.js"></script>
+<script>lucide.createIcons();</script>
 </body>
 </html>
