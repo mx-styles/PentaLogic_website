@@ -9,6 +9,7 @@ import Contact from './pages/Contact'
 import Blog from './pages/Blog'
 import ServiceTemplate from './pages/ServiceTemplate'
 import TermsOfService from './pages/TermsOfService'
+import PrivacyPolicy from './pages/PrivacyPolicy'
 
 import './styles/global.css'
 
@@ -23,6 +24,7 @@ export default function App() {
           <Route path="/services/:serviceId" element={<ServiceTemplate />} />
           <Route path="/case-studies" element={<CaseStudies />} />
           <Route path="/terms-of-service" element={<TermsOfService />} />
+          <Route path="/privacy-policy" element={<PrivacyPolicy />} />
           <Route path="/blog" element={<Blog />} />
           <Route path="/contact" element={<Contact />} />
         </Routes>
