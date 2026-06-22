@@ -10,6 +10,7 @@ import Blog from './pages/Blog'
 import ServiceTemplate from './pages/ServiceTemplate'
 import TermsOfService from './pages/TermsOfService'
 import PrivacyPolicy from './pages/PrivacyPolicy'
+import BlogTemplate from './pages/insights/BlogTemplate'
 
 import './styles/global.css'
 
@@ -26,6 +27,7 @@ export default function App() {
           <Route path="/terms-of-service" element={<TermsOfService />} />
           <Route path="/privacy-policy" element={<PrivacyPolicy />} />
           <Route path="/blog" element={<Blog />} />
+          <Route path="/blog/:slug" element={<BlogTemplate />} />
           <Route path="/contact" element={<Contact />} />
         </Routes>
       </Layout>

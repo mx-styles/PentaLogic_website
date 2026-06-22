@@ -27,9 +27,15 @@
   letter-spacing: -0.2px;
 }
 
+.privacy-content p, .privacy-content li {
+  font-family: var(--font-sans, 'Inter', sans-serif);
+  font-size: 1.05rem;
+  line-height: 1.65;
+  color: var(--text-primary, var(--white));
+}
+
 .privacy-content p {
   margin-bottom: 1.5rem;
-  font-family: 'Inter', sans-serif;
   opacity: 0.9;
 }
 
