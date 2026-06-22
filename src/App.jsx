@@ -8,6 +8,7 @@ import CaseStudies from './pages/CaseStudies'
 import Contact from './pages/Contact'
 import Blog from './pages/Blog'
 import ServiceTemplate from './pages/ServiceTemplate'
+import TermsOfService from './pages/TermsOfService'
 
 import './styles/global.css'
 
@@ -21,6 +22,7 @@ export default function App() {
           <Route path="/services" element={<ServicesOverview />} />
           <Route path="/services/:serviceId" element={<ServiceTemplate />} />
           <Route path="/case-studies" element={<CaseStudies />} />
+          <Route path="/terms-of-service" element={<TermsOfService />} />
           <Route path="/blog" element={<Blog />} />
           <Route path="/contact" element={<Contact />} />
         </Routes>
