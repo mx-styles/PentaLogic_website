@@ -9,15 +9,26 @@ export default function Home() {
   const navigate = useNavigate()
 
   useEffect(() => {
+    let frameId
     const handleMouseMove = (e) => {
       // Disable cursor tracking on touch viewports for performance
       if (window.matchMedia('(pointer: coarse)').matches) return
-      setCoords({ x: `${e.clientX}px`, y: `${e.clientY}px` })
+      
+      if (frameId) {
+        cancelAnimationFrame(frameId)
+      }
+      
+      frameId = requestAnimationFrame(() => {
+        setCoords({ x: `${e.clientX}px`, y: `${e.clientY}px` })
+      })
     }
 
     window.addEventListener('mousemove', handleMouseMove)
     return () => {
       window.removeEventListener('mousemove', handleMouseMove)
+      if (frameId) {
+        cancelAnimationFrame(frameId)
+      }
     }
   }, [])
 
