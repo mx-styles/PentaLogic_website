@@ -28,7 +28,7 @@ export default function Footer() {
           <h5>Resources</h5>
           <ul>
             <li><Link to="/blog">Insights</Link></li>
-            <li><a href="#case-studies">Case Studies</a></li>
+            <li><Link to="/case-studies">Case Studies</Link></li>
             <li><Link to="/blog">Blog</Link></li>
           </ul>
         </div>
