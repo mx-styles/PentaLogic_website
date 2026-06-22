@@ -3,49 +3,49 @@ import './About.css'
 
 const TEAM = [
   {
-    first: 'Priya',
-    last: 'Anand',
-    role: 'Founder & Lead Strategist',
-    bio: 'Fifteen years inside data platforms taught her that strategy without infrastructure is just a slide deck. Leads every engagement from kickoff to handover.',
-    img: '/assets/images/profile1.png',
-    linkedin: '#',
-    email: '#'
+    first: 'Tinashe Gift',
+    last: 'Ganyekanye',
+    role: 'Chief Strategist',
+    bio: 'Systems architect and professional strategist specializing in B2B data-led enterprise models. Bridges macroeconomic industry gaps with scalable computational infrastructure.',
+    img: '/assets/images/tinashe.png',
+    linkedin: 'www.linkedin.com/in/tinashe-ganyekanye-ab038423b',
+    email: 'tganyekanye@pentalogic.co.zw'
   },
   {
-    first: 'Marcus',
-    last: 'Webb',
-    role: 'Head of Predictive Analytics',
-    bio: 'Builds the forecasting models that turn historical noise into decisions your team can actually act on.',
-    img: '/assets/images/profile2.png',
-    linkedin: '#',
-    email: '#'
+    first: 'Tatenda',
+    last: 'Satiyi',
+    role: 'Chief Communications Officer',
+    bio: 'Orchestrates institutional public engagement, growth market strategy, and corporate narratives. Translates deep technical engineering complexities into high-impact executive board assets.',
+    img: '/assets/images/tatenda.png',
+    linkedin: 'linkedin.com/in/tatenda-satiyi-29670123b',
+    email: 'tsatiyi@pentalogic.co.zw'
   },
   {
-    first: 'Sofia',
-    last: 'Lindqvist',
-    role: 'Head of Data Systems',
-    bio: 'Designs the pipelines and architecture that keep data moving — reliably, securely, at scale.',
-    img: '/assets/images/profile3.png',
-    linkedin: '#',
-    email: '#'
+    first: 'Sean',
+    last: 'Chirenje',
+    role: 'Chief Data Scientist',
+    bio: 'Spearheads predictive analytics research, custom machine learning workflows, and mathematical modeling pipelines. Leads the frontend visual engineering and interface telemetry architectures.',
+    img: '/assets/images/sean.png',
+    linkedin: 'linkedin.com/in/sean-chirenje-72a74b247',
+    email: 'schirenje@pentalogic.co.zw'
   },
   {
-    first: 'Daniel',
-    last: 'Osei',
-    role: 'Principal Software Engineer',
-    bio: 'Ships the custom tools and internal platforms that make the strategy usable day to day.',
-    img: '/assets/images/profile4.png',
-    linkedin: '#',
-    email: '#'
+    first: 'Nelson',
+    last: 'Murerwa',
+    role: 'Chief Operations Officer',
+    bio: 'Coordinates operational delivery pipelines, code repository governance, and developer tools. Specializes in optimizing high-throughput developer environments and rapid systems troubleshooting.',
+    img: '/assets/images/nelson.png',
+    linkedin: 'linkedin.com/in/nelson-murerwa-35249a297',
+    email: 'nmurerwa@pentalogic.co.zw'
   },
   {
-    first: 'Lena',
-    last: 'Ferreira',
-    role: 'Head of Insights & Research',
-    bio: "Turns engagement findings into the published research and case studies that keep clients ahead of what's coming next.",
-    img: '/assets/images/profile5.png',
-    linkedin: '#',
-    email: '#'
+    first: 'Maxwell',
+    last: 'Chituku',
+    role: 'Chief Technology Officer',
+    bio: 'Architects secure low-level backend configurations, containerized microservice API networks, and High-Performance Computing (HPC) server hardware integrations.',
+    img: '/assets/images/maxwell.png',
+    linkedin: 'linkedin.com/in/maxwellchituku',
+    email: 'mchituku@pentalogic.co.zw'
   }
 ]
 
@@ -65,6 +65,7 @@ export default function About() {
   const focusedRef = useRef(false)
   const manualHoldRef = useRef(false)
   const manualHoldTimeoutRef = useRef(null)
+  const activePhotoSlotRef = useRef('A')
 
   const ANGLE_STEP = 360 / TEAM.length; // 72 deg for 5 members
   const REVOLUTION_SECONDS = 30; // one full slow turn
@@ -141,16 +142,16 @@ export default function About() {
   const applyMemberChange = (index) => {
     const member = TEAM[index]
 
-    // Crossfade photos slot swap
-    setActivePhotoSlot((prevSlot) => {
-      const nextSlot = prevSlot === 'A' ? 'B' : 'A'
-      if (nextSlot === 'A') {
-        setPhotoSlotA(member.img)
-      } else {
-        setPhotoSlotB(member.img)
-      }
-      return nextSlot
-    })
+    // Crossfade photos slot swap cleanly using Refs to avoid closures / state setter rendering issues
+    const nextSlot = activePhotoSlotRef.current === 'A' ? 'B' : 'A'
+    activePhotoSlotRef.current = nextSlot
+
+    if (nextSlot === 'A') {
+      setPhotoSlotA(member.img)
+    } else {
+      setPhotoSlotB(member.img)
+    }
+    setActivePhotoSlot(nextSlot)
 
     // Fade swap card info
     setIsSwapping(true)
