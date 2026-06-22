@@ -73,10 +73,11 @@
   gap: 24px;
 }
 
-.terms-content p {
-  color: var(--muted);
-  font-size: 15.5px;
-  line-height: 1.7;
+.terms-content p, .terms-content li {
+  font-family: var(--font-sans, 'Inter', sans-serif);
+  font-size: 1.05rem;
+  line-height: 1.65;
+  color: var(--text-primary, var(--white));
 }
 
 .terms-content h2 {
