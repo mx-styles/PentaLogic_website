@@ -1,0 +1,114 @@
+.privacy-wrapper {
+  position: relative;
+  min-height: 100vh;
+  background-color: var(--bg);
+  overflow-x: hidden;
+}
+
+.privacy-content {
+  max-width: 800px;
+  margin: 0 auto;
+  color: var(--muted);
+  line-height: 1.7;
+}
+
+.privacy-content .lead {
+  font-size: 1.15rem;
+  color: var(--white);
+  margin-bottom: 2.5rem;
+}
+
+.privacy-content h2 {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 1.6rem;
+  font-weight: 600;
+  color: var(--accent);
+  margin: 3rem 0 1.2rem;
+  letter-spacing: -0.2px;
+}
+
+.privacy-content p {
+  margin-bottom: 1.5rem;
+  font-family: 'Inter', sans-serif;
+  opacity: 0.9;
+}
+
+.privacy-content ul {
+  margin-bottom: 2rem;
+  padding-left: 1.5rem;
+  list-style: disc;
+}
+
+.privacy-content li {
+  margin-bottom: 0.8rem;
+}
+
+.privacy-content li strong {
+  color: var(--white);
+  font-weight: 600;
+}
+
+/* Cookie Matrix Table */
+.table-responsive {
+  width: 100%;
+  overflow-x: auto;
+  margin: 2rem 0;
+  border: 1px solid var(--accent-border);
+  border-radius: 4px;
+  background: rgba(2, 245, 161, 0.02);
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.9rem;
+}
+
+th, td {
+  padding: 12px 16px;
+  text-align: left;
+  border-bottom: 1px solid var(--accent-border);
+}
+
+th {
+  background: var(--accent-soft);
+  color: var(--accent);
+  font-family: 'IBM Plex Mono', monospace;
+  text-transform: uppercase;
+  font-size: 0.75rem;
+  letter-spacing: 1px;
+}
+
+tr:last-child td {
+  border-bottom: none;
+}
+
+/* Back Button */
+.privacy-back-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  margin-top: 4rem;
+  color: var(--accent);
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.9rem;
+  padding: 10px 0;
+  transition: transform 0.2s ease;
+}
+
+.privacy-back-btn:hover {
+  transform: translateX(-4px);
+}
+
+.privacy-back-btn svg {
+  width: 20px;
+  height: 20px;
+}
+
+/* Responsiveness */
+@media (max-width: 768px) {
+  .privacy-content {
+    max-width: 100%;
+  }
+}
