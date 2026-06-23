@@ -74,7 +74,7 @@ export default function Home() {
           style={{ opacity: bgState === 'default' ? 1 : 0 }}
         >
           <div className="bg-ghost">
-            <img src="assets/images/hero-headset.png" alt="" />
+            <img src="/assets/images/hero-headset.png" alt="" loading="lazy" />
           </div>
         </div>
         <div 
@@ -82,7 +82,7 @@ export default function Home() {
           style={{ opacity: bgState === 'scrolled' ? 1 : 0 }}
         >
           <div className="bg-full">
-            <img src="assets/images/hero-headset.png" alt="" />
+            <img src="/assets/images/hero-headset.png" alt="" loading="lazy" />
           </div>
         </div>
         <div 
@@ -90,7 +90,7 @@ export default function Home() {
           style={{ opacity: bgState === 'at-about' ? 1 : 0 }}
         >
           <div className="bg-about">
-            <img src="assets/images/about-bg.png" alt="" />
+            <img src="/assets/images/about-bg.png" alt="" loading="lazy" />
           </div>
         </div>
       </div>
@@ -382,7 +382,7 @@ export default function Home() {
                 </span>
                 <div className="info">
                   <span class="label">Email</span>
-                  <a href="mailto:hello@pentalogic.com" className="value">hello@pentalogic.com</a>
+                  <a href="mailto:info@pentalogic.co.zw" className="value">info@pentalogic.co.zw</a>
                 </div>
               </div>
               <div className="contact-detail-item">
@@ -393,7 +393,7 @@ export default function Home() {
                 </span>
                 <div className="info">
                   <span class="label">Phone</span>
-                  <a href="tel:+441234567890" className="value">+44 1234 567 890</a>
+                  <a href="tel:+263771881677" className="value">+263 77 188 1677</a>
                 </div>
               </div>
               <div className="contact-detail-item">
@@ -405,7 +405,7 @@ export default function Home() {
                 </span>
                 <div className="info">
                   <span class="label">Office</span>
-                  <span className="value">One Canada Square, London E14 5AB</span>
+                  <span className="value">630 Churchill Ave, Harare</span>
                 </div>
               </div>
               <div className="contact-detail-item">
