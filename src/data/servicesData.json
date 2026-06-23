@@ -1,166 +1,206 @@
 {
   "data-strategy": {
-    "title": "Data Strategy",
-    "tagline": "Navigate complexity with confidence.",
-    "description": "We define the roadmap to capture, store, and leverage your data assets for maximum business impact.",
-    "overviewTitle": "Strategy That Connects <span class=\"highlight\">Business Goals to Data Reality</span>",
-    "overviewLead": "Most organisations have more data than they know what to do with. The challenge is not volume — it is alignment.",
-    "overviewCopy": [
-      "Pentalogic's Data Strategy service helps executive and technical teams close this gap. We assess your current data landscape, understand your business objectives, and work with you to produce a clear, actionable strategy.",
-      "Our strategies are grounded in practical reality. We create working documents that guide real decisions, capability investments, and team structures."
+    "seo": {
+      "metaTitle": "Data Strategy Consulting | Pentalogic Consultancy",
+      "metaDescription": "Pentalogic's Data Strategy service helps organisations define a clear data roadmap, establish governance, and build the foundations for a data-driven future."
+    },
+    "hero": {
+      "title": "Data Strategy",
+      "tagline": "Navigate complexity with confidence.",
+      "description": "Most organisations have more data than they know what to do with. The challenge is not volume — it is alignment.\n\nPentalogic's Data Strategy service helps executive and technical teams close this gap. We assess your current data landscape, understand your business objectives, and work with you to produce a clear, actionable strategy.\n\nOur strategies are grounded in practical reality. We create working documents that guide real decisions, capability investments, and team structures."
+    },
+    "capabilities": [
+      {
+        "title": "Data Maturity Assessment",
+        "text": "Evaluating current data capabilities and identifying gaps for strategic growth."
+      },
+      {
+        "title": "Landscape Mapping",
+        "text": "Designing current-state and target-state maps of data systems."
+      },
+      {
+        "title": "Governance Frameworks",
+        "text": "Establishing robust policies and compliance standards to manage information."
+      },
+      {
+        "title": "Strategic Roadmaps",
+        "text": "Constructing a prioritized roadmap aligned with business objectives."
+      }
     ],
-    "pillarTitle": "What You Receive",
-    "pillarItems": [
-      "Data maturity assessment report",
-      "Current-state data landscape map",
-      "Governance framework and policy templates",
-      "Prioritised strategic data roadmap"
-    ],
-    "outcomes": [
+    "benefits": [
       {
         "icon": "🎯",
         "title": "Aligned Priorities",
-        "description": "Ensuring investments support the right outcomes."
+        "text": "Ensuring investments support the right business outcomes."
       },
       {
         "icon": "🛡️",
         "title": "Reduced Risk",
-        "description": "Governance frameworks that protect the organisation."
+        "text": "Governance frameworks that protect the organisation."
       },
       {
         "icon": "⚡",
         "title": "Faster Decisions",
-        "description": "Confidence in outputs leads to shorter cycles."
+        "text": "Confidence in outputs leads to shorter cycles."
       }
     ],
     "cta": {
-      "title": "Ready to define your data roadmap?",
-      "prompt": "Let's align your technology strategy with your business goals.",
-      "buttonText": "Schedule a strategy session",
-      "link": "/contact"
+      "header": "Ready to define your data roadmap?",
+      "subtext": "Let's align your technology strategy with your business goals.",
+      "buttonText": "Schedule a strategy session"
     }
   },
   "predictive-analytics": {
-    "title": "Predictive Analytics",
-    "tagline": "Anticipate what comes next.",
-    "description": "Deploy machine learning models to forecast outcomes, model customer behaviour, and optimize processes.",
-    "overviewTitle": "Intelligence That Informs <span class=\"highlight\">Action, Not Just Hindsight</span>",
-    "overviewLead": "Reporting tells you what happened. Predictive analytics tells you what is likely to happen next — and why.",
-    "overviewCopy": [
-      "Pentalogic designs and deploys analytics and machine learning solutions that go beyond the dashboard. We build forecasting models, behavioural segmentation systems, and anomaly detection pipelines.",
-      "We work with your existing data and teams — enhancing what you have rather than demanding a wholesale replacement of your stack."
+    "seo": {
+      "metaTitle": "Predictive Analytics Services | Pentalogic Consultancy",
+      "metaDescription": "Pentalogic's Predictive Analytics service helps organisations forecast outcomes, model customer behaviour, and deploy machine learning solutions that drive smarter decisions."
+    },
+    "hero": {
+      "title": "Predictive Analytics",
+      "tagline": "Anticipate what comes next.",
+      "description": "Reporting tells you what happened. Predictive analytics tells you what is likely to happen next — and why.\n\nPentalogic designs and deploys analytics and machine learning solutions that go beyond the dashboard. We build forecasting models, behavioural segmentation systems, and anomaly detection pipelines.\n\nWe work with your existing data and teams — enhancing what you have rather than demanding a wholesale replacement of your stack."
+    },
+    "capabilities": [
+      {
+        "title": "Custom ML Models",
+        "text": "Design, build, and deploy machine learning models tailored to your challenges."
+      },
+      {
+        "title": "Forecasting Pipelines",
+        "text": "Implement customer churn and demand forecasting systems for proactive planning."
+      },
+      {
+        "title": "Real-time Alerting",
+        "text": "Set up real-time anomaly detection pipelines to capture critical changes."
+      },
+      {
+        "title": "Explainable Insights",
+        "text": "Deliver comprehensive reports detailing model outputs and actionable insights."
+      }
     ],
-    "pillarTitle": "Key Offerings",
-    "pillarItems": [
-      "Custom ML model development",
-      "Customer churn & demand forecasting",
-      "Real-time anomaly detection",
-      "Insight & explainability reports"
-    ],
-    "outcomes": [
+    "benefits": [
       {
         "icon": "📦",
         "title": "Demand Forecasting",
-        "description": "Predict future demand with precision."
+        "text": "Predict future demand fluctuations with high accuracy."
       },
       {
         "icon": "👥",
         "title": "Behaviour Modelling",
-        "description": "Personalise engagement at scale."
+        "text": "Personalise customer engagement at scale using predictive segmentation."
       },
       {
         "icon": "⚠️",
         "title": "Risk Detection",
-        "description": "Flag potential issues before they escalate."
+        "text": "Flag potential system anomalies and operational risks before they escalate."
       }
     ],
     "cta": {
-      "title": "Ready to build predictive models?",
-      "prompt": "Leverage your data history to forecast your business future.",
-      "buttonText": "Request an analytics consult",
-      "link": "/contact"
+      "header": "Ready to build predictive models?",
+      "subtext": "Leverage your data history to forecast your business future.",
+      "buttonText": "Request an analytics consult"
     }
   },
   "data-systems": {
-    "title": "Data Systems",
-    "tagline": "Robust infrastructure for real-time intelligence.",
-    "description": "Design and build data systems, databases, and pipelines that are secure, reliable, and scaleable.",
-    "overviewTitle": "Infrastructure Engineered for <span class=\"highlight\">Reliability and Scale</span>",
-    "overviewLead": "Clean data is the prerequisite for everything. We build the ingestion pipelines, storage architectures, and transformation layers you need.",
-    "overviewCopy": [
-      "Pentalogic's Data Systems practice designs and engineers the data infrastructure your organisation needs. We build with production-grade reliability in mind from day one.",
-      "We recommend the right tool for your context — not the most fashionable one — across leading cloud providers and open-source tech."
+    "seo": {
+      "metaTitle": "Data Systems & Infrastructure | Pentalogic Consultancy",
+      "metaDescription": "Pentalogic's Data Systems service designs and builds the data infrastructure, pipelines, and platforms your organisation needs to scale — reliably and efficiently."
+    },
+    "hero": {
+      "title": "Data Systems",
+      "tagline": "Robust infrastructure for real-time intelligence.",
+      "description": "Clean data is the prerequisite for everything. We build the ingestion pipelines, storage architectures, and transformation layers you need.\n\nPentalogic's Data Systems practice designs and engineers the data infrastructure your organisation needs. We build with production-grade reliability in mind from day one.\n\nWe recommend the right tool for your context — not the most fashionable one — across leading cloud providers and open-source tech."
+    },
+    "capabilities": [
+      {
+        "title": "Cloud Platforms",
+        "text": "Architect scalable and secure data platforms on AWS, Azure, and GCP."
+      },
+      {
+        "title": "ETL & ELT Pipelines",
+        "text": "Engineer high-performance data ingestion and transformation pipelines."
+      },
+      {
+        "title": "Warehouse & Lakehouses",
+        "text": "Design robust data warehouse architectures using Snowflake and BigQuery."
+      },
+      {
+        "title": "Real-Time Streaming",
+        "text": "Implement real-time data streaming architectures for immediate insight delivery."
+      }
     ],
-    "pillarTitle": "Key Capabilities",
-    "pillarItems": [
-      "Cloud Data Platforms (AWS/Azure/GCP)",
-      "ETL & ELT Pipeline Engineering",
-      "Data Warehouse & Lakehouse Design",
-      "Real-Time Data Streaming"
-    ],
-    "outcomes": [
+    "benefits": [
       {
         "icon": "☁️",
-        "title": "Cloud Native",
-        "description": "Scalable and cost-efficient platform design."
+        "title": "Cloud Native Infrastructure",
+        "text": "Scale resources cost-efficiently with modern serverless technologies."
       },
       {
         "icon": "🔄",
-        "title": "Reliable Pipelines",
-        "description": "Ingest, transform, and load with observability."
+        "title": "Reliable Operations",
+        "text": "Build pipelines with automated observability and error-handling."
       },
       {
         "icon": "✅",
-        "title": "Data Quality",
-        "description": "Automated checks keeping data trustworthy."
+        "title": "Data Integrity & Quality",
+        "text": "Deploy automated checks to keep all ingested data clean."
       }
     ],
     "cta": {
-      "title": "Ready to upgrade your data infrastructure?",
-      "prompt": "Establish reliable, real-time pipelines built to scale with your demand.",
-      "buttonText": "Discuss systems architecture",
-      "link": "/contact"
+      "header": "Ready to upgrade your data infrastructure?",
+      "subtext": "Establish reliable, real-time pipelines built to scale with your demand.",
+      "buttonText": "Discuss systems architecture"
     }
   },
   "custom-software": {
-    "title": "Custom Software",
-    "tagline": "Bespoke digital products engineered to scale.",
-    "description": "We develop custom software, SaaS products, APIs, and dashboard systems aligned with your operational needs.",
-    "overviewTitle": "Software Designed Around <span class=\"highlight\">Your Problem</span>",
-    "overviewLead": "Generic software forces organisations to adapt their workflows to the tool. Custom software does the opposite — it adapts entirely to your context.",
-    "overviewCopy": [
-      "Pentalogic designs and develops custom software for organisations that need something purpose-built. Whether it is an internal operational tool, a client-facing web application, or an analytics platform.",
-      "We write clean, well-documented, maintainable code. Our architecture decisions are made with your team's long-term ability to own and evolve the product in mind."
+    "seo": {
+      "metaTitle": "Custom Software Development | PentaLogic",
+      "metaDescription": "Partner with PentaLogic for custom software development, scalable SaaS platform developer solutions, custom API engineering, and legacy system modernization."
+    },
+    "hero": {
+      "title": "Custom Software Development",
+      "tagline": "Bespoke digital products engineered to scale.",
+      "description": "Off-the-shelf software forces your business to compromise. At PentaLogic, we build bespoke digital products engineered for long-term technical adaptability and tangible operational efficiency.\n\nAs an enterprise-grade SaaS platform developer, we construct robust web applications and native mobile interfaces designed to capture rich, clean telemetry data from day one. Our engineering teams eliminate fragmented workflows through custom API engineering, connecting your vital platforms into unified ecosystems.\n\nIf outdated infrastructure is slowing your growth, our legacy system modernization frameworks transition your applications to modern, cloud-native environments safely. We replace rigid code with flexible architectures that turn daily operations into a streamlined engine for business growth."
+    },
+    "capabilities": [
+      {
+        "title": "Web & Mobile Development",
+        "text": "Engineering cross-platform, responsive apps optimized for seamless digital product user experiences."
+      },
+      {
+        "title": "API Architectures",
+        "text": "Building robust, custom API structures for secure and rapid data exchange."
+      },
+      {
+        "title": "Microservices",
+        "text": "Designing decoupled services that ensure high availability and independent software scalability."
+      },
+      {
+        "title": "Containerization",
+        "text": "Packaging applications with Docker and Kubernetes for flawless, multi-cloud deployment automation."
+      }
     ],
-    "pillarTitle": "Key Capabilities",
-    "pillarItems": [
-      "Responsive Web Applications",
-      "Internal Tools & Admin Portals",
-      "API Design & System Integration",
-      "AI-Enabled Software Products"
-    ],
-    "outcomes": [
+    "benefits": [
       {
         "icon": "🌐",
-        "title": "Web Apps",
-        "description": "High-performance responsive applications."
+        "title": "Custom Operations Fit",
+        "text": "We build software tailored specifically to your workflows, eliminating unnecessary operational overhead completely."
       },
       {
         "icon": "🔧",
-        "title": "Internal Tools",
-        "description": "Removing manual work and reducing error."
+        "title": "Full IP Ownership",
+        "text": "Your team retains absolute ownership of the source code, eliminating restrictive licensing fees forever."
       },
       {
         "icon": "🔌",
-        "title": "Integrations",
-        "description": "Connecting your systems seamlessly."
+        "title": "Telemetry Integration",
+        "text": "Every system includes built-in analytics logging to track performance and capture actionable intelligence."
       }
     ],
     "cta": {
-      "title": "Ready to build bespoke software?",
-      "prompt": "Partner with our engineering team to build scalable digital products.",
-      "buttonText": "Start product discovery",
-      "link": "/contact"
+      "header": "Build the Software That Drives Your Competitive Advantage",
+      "subtext": "Accelerate your digital transformation with high-performance software engineered for your exact business goals.",
+      "buttonText": "Launch Your Project"
     }
   }
 }

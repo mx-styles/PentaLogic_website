@@ -15,7 +15,7 @@ export default function ServiceTemplate() {
     if (!service) return
 
     // Update document title dynamically for SEO
-    document.title = `${service.title} | Pentalogic Consultancy`
+    document.title = service.seo.metaTitle
 
     // Update meta description tag dynamically for SEO
     let metaDescription = document.querySelector('meta[name="description"]')
@@ -24,7 +24,7 @@ export default function ServiceTemplate() {
       metaDescription.name = 'description'
       document.head.appendChild(metaDescription)
     }
-    metaDescription.content = service.description
+    metaDescription.content = service.seo.metaDescription
   }, [serviceId, service])
 
   useEffect(() => {
@@ -73,6 +73,11 @@ export default function ServiceTemplate() {
     )
   }
 
+  // Parse hero description into narrative overview paragraphs
+  const paragraphs = service.hero.description ? service.hero.description.split('\n\n') : []
+  const overviewLead = paragraphs[0] || ''
+  const overviewCopy = paragraphs.slice(1)
+
   return (
     <div className="service-template-wrapper">
       {/* Background layers */}
@@ -117,10 +122,10 @@ export default function ServiceTemplate() {
         <div className="hero-grid">
           <div className="hero-content-block">
             <h1 className="fade-up" style={{ animationDelay: '.1s' }}>
-              {service.title}<span className="accent">.</span>
+              {service.hero.title}<span className="accent">.</span>
             </h1>
             <p className="sub fade-up" style={{ animationDelay: '.2s' }}>
-              {service.tagline}
+              {service.hero.tagline}
             </p>
             <div className="cta-row fade-up" style={{ animationDelay: '.3s' }}>
               <a href="#service-detail-section" className="btn btn-primary" onClick={(e) => {
@@ -141,24 +146,28 @@ export default function ServiceTemplate() {
       <section className="service-template-detail" id="service-detail-section">
         <div className="section-container">
           <p className="section-label">Service Overview</p>
-          <h2 dangerouslySetInnerHTML={{ __html: service.overviewTitle }}></h2>
-          <p className="about-lead">
-            {service.overviewLead}
-          </p>
+          <h2>{service.hero.title} Overview</h2>
+          {overviewLead && (
+            <p className="about-lead">
+              {overviewLead}
+            </p>
+          )}
 
           <div className="about-grid">
             <div className="about-copy">
-              {service.overviewCopy.map((paragraph, index) => (
+              {overviewCopy.map((paragraph, index) => (
                 <p key={index}>{paragraph}</p>
               ))}
             </div>
 
             <div className="about-pillars">
               <article className="about-pillar">
-                <h3>{service.pillarTitle}</h3>
+                <h3>Technical Capabilities</h3>
                 <ul className="deliverables-list">
-                  {service.pillarItems.map((item, index) => (
-                    <li key={index}>• {item}</li>
+                  {service.capabilities.map((item, index) => (
+                    <li key={index}>
+                      <strong>{item.title}:</strong> {item.text}
+                    </li>
                   ))}
                 </ul>
               </article>
@@ -167,11 +176,11 @@ export default function ServiceTemplate() {
 
           {/* Impact Outcomes Grid */}
           <div className="about-values">
-            {service.outcomes.map((outcome, index) => (
+            {service.benefits.map((benefit, index) => (
               <div key={index} className="about-value">
-                <span className="about-value-num" aria-hidden="true">{outcome.icon}</span>
-                <p className="about-value-label">{outcome.title}</p>
-                <p className="about-value-desc">{outcome.description}</p>
+                <span className="about-value-num" aria-hidden="true">{benefit.icon}</span>
+                <p className="about-value-label">{benefit.title}</p>
+                <p className="about-value-desc">{benefit.text}</p>
               </div>
             ))}
           </div>
@@ -181,9 +190,9 @@ export default function ServiceTemplate() {
       {/* Reusable Bottom CTA Banner */}
       <section className="consultation-banner fade-up" style={{ animationDelay: '.35s' }}>
         <div className="banner-container">
-          <h2>{service.cta.title}</h2>
-          <p>{service.cta.prompt}</p>
-          <Link to={service.cta.link} className="btn btn-primary">{service.cta.buttonText}</Link>
+          <h2>{service.cta.header}</h2>
+          {service.cta.subtext && <p>{service.cta.subtext}</p>}
+          <Link to="/contact" className="btn btn-primary">{service.cta.buttonText}</Link>
         </div>
       </section>
     </div>
