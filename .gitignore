@@ -17,6 +17,9 @@ desktop.ini
 *.sln
 *.sw?
 
+# Build output
+dist/
+
 # Local logs
 agent_session.log
 *.log
