@@ -26,7 +26,7 @@
   max-width: 1200px;
   width: 100%;
   margin: 0 auto;
-  padding: 40px 48px 80px;
+  padding: 120px 48px 80px;
 }
 
 .hero-content {
@@ -338,7 +338,7 @@
   .hero-grid {
     grid-template-columns: 1fr;
     gap: 40px;
-    padding: 24px 32px 72px;
+    padding: 100px 32px 72px;
     text-align: center;
   }
   .hero-content {
@@ -382,7 +382,7 @@
     padding: 28px 24px;
   }
   .hero-grid {
-    padding: 16px 20px 64px;
+    padding: 80px 20px 64px;
   }
   .services-detail {
     padding: 24px 20px 60px;
