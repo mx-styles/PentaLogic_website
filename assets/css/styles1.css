@@ -640,143 +640,6 @@ h1 .accent{
   color:var(--muted-2);
 }
 
-/* ---------- team section (About) ---------- */
-.team-block{
-  margin-top:56px;
-  padding-top:56px;
-  border-top:1px solid rgba(2,245,161,0.12);
-}
-
-.team-block .about-lead{
-  margin-bottom:40px;
-}
-
-.team-grid{
-  display:grid;
-  grid-template-columns:repeat(2, 1fr);
-  gap:24px;
-}
-
-.team-card{
-  display:flex;
-  gap:20px;
-  padding:28px 24px;
-  border:1px solid var(--accent-border);
-  border-radius:4px;
-  background:rgba(7,25,30,0.55);
-  transition:border-color .25s ease, transform .2s ease, box-shadow .25s ease;
-}
-
-.team-card:hover{
-  border-color:rgba(2,245,161,0.5);
-  transform:translateY(-4px);
-  box-shadow:0 12px 32px rgba(2,245,161,0.06);
-}
-
-.team-card--feature{
-  grid-column:1 / -1;
-}
-
-.team-card--feature .team-bio{
-  max-width:560px;
-}
-
-.team-avatar{
-  flex-shrink:0;
-  width:84px;
-  height:84px;
-  border-radius:4px;
-  border:1px solid var(--accent-border);
-  background:
-    linear-gradient(160deg, rgba(2,245,161,0.16), rgba(2,245,161,0.03)),
-    linear-gradient(to right, rgba(2,245,161,0.1) 1px, transparent 1px) 0 0/14px 14px,
-    linear-gradient(to bottom, rgba(2,245,161,0.1) 1px, transparent 1px) 0 0/14px 14px,
-    var(--bg);
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  overflow:hidden;
-}
-
-/* If a real <img> replaces the initials span, it fills the same frame */
-.team-avatar img{
-  width:100%;
-  height:100%;
-  object-fit:cover;
-  display:block;
-}
-
-.team-avatar span{
-  font-family:'Space Grotesk',sans-serif;
-  font-size:22px;
-  font-weight:600;
-  letter-spacing:0.5px;
-  color:var(--accent);
-}
-
-.team-body{
-  display:flex;
-  flex-direction:column;
-  align-items:flex-start;
-  gap:8px;
-  min-width:0;
-}
-
-.team-body h3{
-  font-family:'Space Grotesk',sans-serif;
-  font-size:18px;
-  letter-spacing:-0.2px;
-  color:var(--white);
-}
-
-.team-first{font-weight:400;}
-.team-last{font-weight:700; margin-left:4px;}
-
-.team-role{
-  font-family:'IBM Plex Mono',monospace;
-  font-size:10.5px;
-  font-weight:500;
-  letter-spacing:0.5px;
-  text-transform:uppercase;
-  padding:4px 9px;
-}
-
-.team-bio{
-  color:var(--muted);
-  font-size:14px;
-  line-height:1.6;
-  margin-top:2px;
-}
-
-.team-links{
-  display:flex;
-  gap:10px;
-  margin-top:4px;
-}
-
-.team-links a{
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  width:28px;
-  height:28px;
-  border-radius:4px;
-  border:1px solid rgba(255,255,255,0.12);
-  color:var(--muted);
-  transition:border-color .2s ease, color .2s ease;
-}
-
-.team-links a:hover{
-  border-color:var(--accent);
-  color:var(--accent);
-}
-
-.team-links svg{
-  width:14px;
-  height:14px;
-  display:block;
-}
-
 /* ---------- services section (Home) ---------- */
 .services-section{
   position:relative;
@@ -1164,7 +1027,6 @@ body.scrolled .scroll-hint{opacity:0; pointer-events:none;}
   .hero-chart{width:min(320px, 80vw);}
   .about-grid{grid-template-columns:1fr; gap:40px;}
   .about-values{grid-template-columns:repeat(2, 1fr);}
-  .team-grid{grid-template-columns:1fr;}
   .services-grid{grid-template-columns:repeat(2, 1fr);}
   .hero-content{padding:40px 32px 60px;}
   .services-detail{padding:40px 32px 80px;}
@@ -1203,8 +1065,6 @@ body.scrolled .scroll-hint{opacity:0; pointer-events:none;}
   .contact-section{padding:0 24px 100px;}
   .footer-section{padding:40px 24px 24px;}
   .about-values{grid-template-columns:1fr; margin-top:40px; padding-top:40px;}
-  .team-block{margin-top:40px; padding-top:40px;}
-  .team-card{flex-direction:column;}
   .services-grid{grid-template-columns:1fr;}
   .footer-grid{grid-template-columns:1fr 1fr;}
   .footer-grid .footer-brand{grid-column:1 / -1;}

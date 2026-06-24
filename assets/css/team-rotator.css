@@ -1,0 +1,287 @@
+/* ===========================================================
+   Team Rotator — pentagon-synced member spotlight
+   Place in assets/css/ and link after styles.css on About.html
+   Depends on tokens + .highlight/.team-first/.team-last/.team-role/
+   .team-bio/.team-links already defined in styles.css
+   =========================================================== */
+
+.team-rotator{
+  display:grid;
+  grid-template-columns:1fr 1.1fr;
+  gap:56px;
+  align-items:center;
+  margin-top:8px;
+}
+
+.team-rotator-visual{
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  gap:28px;
+}
+
+/* ---------- pentagon shape ---------- */
+.pentagon-wrap{
+  position:relative;
+  width:min(340px, 100%);
+  aspect-ratio:1;
+}
+
+/* ensure smooth rotation around the visual center */
+.pentagon-wrap{
+  transform-origin:center center;
+  will-change: transform;
+}
+
+.pentagon-glow{
+  position:absolute;
+  inset:-16%;
+  background:radial-gradient(circle, var(--accent-soft), transparent 70%);
+  filter:blur(16px);
+  z-index:0;
+}
+
+.pentagon-svg{
+  position:relative;
+  z-index:1;
+  width:100%;
+  height:100%;
+  display:block;
+  overflow:visible;
+}
+
+.pentagon-path{
+  fill:none;
+  stroke-linejoin:round;
+}
+
+.pentagon-path--echo-2{ stroke:var(--accent); stroke-width:1.1; stroke-opacity:.16; }
+.pentagon-path--echo-1{ stroke:var(--accent); stroke-width:1.5; stroke-opacity:.34; }
+.pentagon-path--main{
+  stroke:var(--accent);
+  stroke-width:2.2;
+  filter:drop-shadow(0 0 8px rgba(2,245,161,0.28));
+}
+
+/* fixed marker above the wrap — flags the "vertex at 12 o'clock" sync point */
+.pentagon-marker{
+  position:absolute;
+  top:-10px;
+  left:50%;
+  width:0;
+  height:0;
+  transform:translateX(-50%);
+  border-left:6px solid transparent;
+  border-right:6px solid transparent;
+  border-top:8px solid var(--accent);
+  opacity:.8;
+  z-index:3;
+  pointer-events:none;
+  filter:drop-shadow(0 0 6px rgba(2,245,161,0.45));
+}
+
+@keyframes pentagon-marker-pulse{
+  0%{ transform:translateX(-50%) scale(1); opacity:.8; }
+  40%{ transform:translateX(-50%) scale(1.7); opacity:1; }
+  100%{ transform:translateX(-50%) scale(1); opacity:.8; }
+}
+
+.pentagon-marker.pulse{
+  animation:pentagon-marker-pulse .6s ease;
+}
+
+/* ---------- centered, non-rotating photo ---------- */
+.team-photo-ring{
+  position:absolute;
+  top:50%;
+  left:50%;
+  width:48%;
+  height:48%;
+  transform:translate(-50%,-50%);
+  border:1px dashed var(--accent-border);
+  border-radius:50%;
+  z-index:1;
+  /* keep the ring stationary so the central photo does not rotate */
+  animation:none;
+}
+
+@keyframes team-photo-ring-spin{
+  from{ transform:translate(-50%,-50%) rotate(0deg); }
+  to{ transform:translate(-50%,-50%) rotate(-360deg); }
+}
+
+.team-photo-frame{
+  position:absolute;
+  top:50%;
+  left:50%;
+  width:38%;
+  height:38%;
+  transform:translate(-50%,-50%);
+  border-radius:50%;
+  overflow:hidden;
+  border:1px solid var(--accent-border);
+  background:
+    linear-gradient(160deg, rgba(2,245,161,0.18), rgba(2,245,161,0.03)),
+    var(--bg);
+  box-shadow:0 14px 32px rgba(2,245,161,0.16);
+  z-index:2;
+}
+
+.team-photo{
+  position:absolute;
+  inset:0;
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  opacity:0;
+  transition:opacity .6s ease;
+}
+
+.team-photo.is-active{ opacity:1; }
+
+/* ---------- progress dots ---------- */
+.team-rotator-dots{
+  display:flex;
+  gap:10px;
+}
+
+.team-rotator-dot{
+  width:8px;
+  height:8px;
+  border-radius:50%;
+  border:none;
+  padding:0;
+  background:rgba(255,255,255,0.18);
+  cursor:pointer;
+  transition:background .25s ease, transform .25s ease, box-shadow .25s ease;
+}
+
+.team-rotator-dot:hover{ background:rgba(255,255,255,0.4); }
+
+.team-rotator-dot.is-active{
+  background:var(--accent);
+  transform:scale(1.3);
+  box-shadow:0 0 0 3px var(--accent-soft);
+}
+
+/* ---------- info panel ---------- */
+.team-rotator-info{
+  display:flex;
+  flex-direction:column;
+  gap:18px;
+  min-width:0;
+}
+
+/* keep the info panel vertically centered with the visual */
+.team-rotator-info{ align-self:center; }
+
+/* make the "next" control visually stronger for discoverability */
+#teamNext.team-rotator-btn{
+  box-shadow:0 8px 24px rgba(2,245,161,0.18);
+  border-color:var(--accent);
+  color:var(--accent);
+  background:linear-gradient(180deg, rgba(2,245,161,0.06), rgba(2,245,161,0.02));
+}
+
+#teamNext.team-rotator-btn:hover{
+  box-shadow:0 12px 36px rgba(2,245,161,0.22);
+  transform:translateY(-1px);
+}
+
+.team-rotator-meta{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+}
+
+.team-rotator-count{
+  font-family:'IBM Plex Mono',monospace;
+  font-size:11px;
+  letter-spacing:1px;
+  text-transform:uppercase;
+  color:var(--muted-2);
+}
+
+.team-rotator-nav{
+  display:flex;
+  gap:8px;
+}
+
+.team-rotator-btn{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  width:32px;
+  height:32px;
+  border-radius:4px;
+  border:1px solid rgba(255,255,255,0.12);
+  background:transparent;
+  color:var(--muted);
+  cursor:pointer;
+  transition:border-color .2s ease, color .2s ease;
+}
+
+.team-rotator-btn:hover{
+  border-color:var(--accent);
+  color:var(--accent);
+}
+
+.team-rotator-btn svg{
+  width:16px;
+  height:16px;
+  display:block;
+}
+
+.team-rotator-card{
+  padding:28px 28px 30px;
+  border:1px solid var(--accent-border);
+  border-radius:4px;
+  background:rgba(7,25,30,0.55);
+  min-height:208px;
+  transition:opacity .22s ease, transform .22s ease;
+}
+
+.team-rotator-card.is-swapping{
+  opacity:0;
+  transform:translateY(6px);
+}
+
+.team-rotator-card h3{
+  font-family:'Space Grotesk',sans-serif;
+  font-size:22px;
+  letter-spacing:-0.2px;
+  color:var(--white);
+  margin-bottom:12px;
+}
+
+.team-rotator-card .team-bio{
+  margin-top:10px;
+}
+
+.team-rotator-card .team-links{
+  margin-top:18px;
+}
+
+/* ---------- responsive ---------- */
+@media (max-width:960px){
+  .team-rotator{
+    grid-template-columns:1fr;
+    gap:36px;
+    justify-items:center;
+  }
+  .team-rotator-info{ align-items:center; width:100%; }
+  .team-rotator-meta{ width:100%; max-width:360px; }
+  .team-rotator-card{ width:100%; max-width:420px; text-align:left; }
+}
+
+@media (max-width:480px){
+  .pentagon-wrap{ width:min(280px, 86vw); }
+}
+
+/* ---------- reduced motion ---------- */
+@media (prefers-reduced-motion: reduce){
+  .team-photo-ring{ animation:none; }
+  .pentagon-marker.pulse{ animation:none; }
+  .team-photo{ transition:none; }
+  .team-rotator-card{ transition:none; }
+}

@@ -20,6 +20,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="assets/css/styles.css">
+  <link rel="stylesheet" href="assets/css/team-rotator.css">
 </head>
 <body>
 
@@ -141,6 +142,87 @@
           <p class="about-value-desc">Measuring success by what changes for your business.</p>
         </div>
       </div>
+
+      <!-- Team -->
+      <div class="team-block">
+        <p class="section-label">Meet The Team</p>
+        <h2>The People Behind <span class="highlight">Pentalogic</span></h2>
+        <p class="about-lead">
+          A small, senior team — no juniors learning on your dime, no hand-offs to someone you've never met. Each lead owns an engagement end to end.
+        </p>
+
+        <div class="team-rotator" id="teamRotator" role="group" aria-roledescription="carousel" aria-label="Team member spotlight">
+          <div class="team-rotator-visual">
+            <div class="pentagon-wrap" id="pentagonWrap">
+              <div class="pentagon-glow" aria-hidden="true"></div>
+
+              <svg class="pentagon-svg" viewBox="0 0 200 200" aria-hidden="true">
+                <g id="pentagonSpin">
+                  <path class="pentagon-path pentagon-path--echo-2"
+                        transform="rotate(-16 100 91.4)"
+                        d="M 82.2 22.93 Q 100 10 117.8 22.93
+                           L 167.8 59.26 Q 185.6 72.19 178.8 93.11
+                           L 159.7 151.89 Q 152.9 172.81 130.9 172.81
+                           L 69.1 172.81 Q 47.1 172.81 40.3 151.89
+                           L 21.2 93.11 Q 14.4 72.19 32.2 59.26 Z" />
+                  <path class="pentagon-path pentagon-path--echo-1"
+                        transform="rotate(16 100 91.4)"
+                        d="M 82.2 22.93 Q 100 10 117.8 22.93
+                           L 167.8 59.26 Q 185.6 72.19 178.8 93.11
+                           L 159.7 151.89 Q 152.9 172.81 130.9 172.81
+                           L 69.1 172.81 Q 47.1 172.81 40.3 151.89
+                           L 21.2 93.11 Q 14.4 72.19 32.2 59.26 Z" />
+                  <path class="pentagon-path pentagon-path--main"
+                        d="M 82.2 22.93 Q 100 10 117.8 22.93
+                           L 167.8 59.26 Q 185.6 72.19 178.8 93.11
+                           L 159.7 151.89 Q 152.9 172.81 130.9 172.81
+                           L 69.1 172.81 Q 47.1 172.81 40.3 151.89
+                           L 21.2 93.11 Q 14.4 72.19 32.2 59.26 Z" />
+                </g>
+              </svg>
+
+              <span class="pentagon-marker" id="pentagonMarker" aria-hidden="true"></span>
+
+              <div class="team-photo-ring" aria-hidden="true"></div>
+
+              <div class="team-photo-frame">
+                <img class="team-photo" id="teamPhotoA" src="assets/images/Darwen.png" alt="" aria-hidden="true">
+                <img class="team-photo" id="teamPhotoB" src="assets/images/Darwen.png" alt="" aria-hidden="true">
+              </div>
+            </div>
+
+            <div class="team-rotator-dots" id="teamDots" role="tablist" aria-label="Choose team member"></div>
+          </div>
+
+          <div class="team-rotator-info">
+            <div class="team-rotator-meta">
+              <span class="team-rotator-count" id="teamCount">01 / 05</span>
+              <div class="team-rotator-nav">
+                <button type="button" class="team-rotator-btn" id="teamPrev" aria-label="Previous team member">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M15 18l-6-6 6-6"/></svg>
+                </button>
+                <button type="button" class="team-rotator-btn" id="teamNext" aria-label="Next team member">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18l6-6-6-6"/></svg>
+                </button>
+              </div>
+            </div>
+
+            <div class="team-rotator-card" id="teamCard">
+              <h3><span class="team-first" id="teamFirst">Priya</span><span class="team-last" id="teamLast">Anand</span></h3>
+              <span class="highlight team-role" id="teamRole">Founder &amp; Lead Strategist</span>
+              <p class="team-bio" id="teamBio">Fifteen years inside data platforms taught her that strategy without infrastructure is just a slide deck. Leads every engagement from kickoff to handover.</p>
+              <div class="team-links">
+                <a href="#" aria-label="Priya Anand on LinkedIn" id="teamLinkedIn">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-4 0v7h-4V9h4v1.5A6 6 0 0 1 16 8Z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+                </a>
+                <a href="#" aria-label="Email Priya Anand" id="teamEmail">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m2 6 10 7L22 6"/></svg>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   </section>
 
@@ -191,5 +273,6 @@
 </div>
 
 <script src="assets/js/main.js"></script>
+<script src="assets/js/team-rotator.js"></script>
 </body>
 </html>
