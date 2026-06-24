@@ -1,0 +1,123 @@
+[
+  {
+    "id": "1",
+    "slug": "navigating-digital-complexity",
+    "title": "Navigating Digital Complexity: A Guide for Modern Enterprise",
+    "author": "Dr. Tafadzwa Moyo",
+    "date": "June 15, 2026",
+    "readingTime": "8 min read",
+    "excerpt": "How large-scale organizations can leverage predictive signals to stay ahead of market shifts.",
+    "category": "Strategy",
+    "featuredImage": "https://images.unsplash.com/photo-1542744094-24638eff58bb?w=800&auto=format&fit=crop",
+    "content": [
+      {
+        "type": "paragraph",
+        "text": "In the modern digital era, complexity is not just an obstacle; it's the environment. Organizations that thrive are those that don't just react to changes but anticipate them through rigorous data strategy and predictive modeling."
+      },
+      {
+        "type": "heading",
+        "level": 2,
+        "text": "The Signal vs. Noise Dilemma"
+      },
+      {
+        "type": "paragraph",
+        "text": "Most companies are drowning in data but starving for insight. The challenge lies in isolating the high-fidelity signals from the background noise of daily operations."
+      },
+      {
+        "type": "blockquote",
+        "text": "Intelligence is not about having all the answers; it's about asking the right questions of your data before the market asks them of you."
+      },
+      {
+        "type": "heading",
+        "level": 3,
+        "text": "Implementing Resilient Systems"
+      },
+      {
+        "type": "paragraph",
+        "text": "Building a resilient data system requires more than just cloud storage. It requires a fundamental shift in how data pipelines are engineered, ensuring transparency and scalability at every node."
+      }
+    ]
+  },
+  {
+    "id": "2",
+    "slug": "predictive-analytics-future",
+    "title": "The Future of Predictive Analytics in Supply Chain",
+    "author": "Ruvimbo Chikwanha",
+    "date": "June 10, 2026",
+    "readingTime": "12 min read",
+    "excerpt": "Exploring how AI-driven foresight is transforming global logistics and inventory management.",
+    "category": "Analytics",
+    "featuredImage": "https://images.unsplash.com/photo-1686061593213-98dad7c599b9?w=800&auto=format&fit=crop",
+    "content": [
+      {
+        "type": "paragraph",
+        "text": "Supply chains are no longer linear. They are complex ecosystems that require real-time visibility and predictive oversight to function efficiently under global pressure."
+      },
+      {
+        "type": "heading",
+        "level": 2,
+        "text": "The AI Revolution in Logistics"
+      },
+      {
+        "type": "paragraph",
+        "text": "Machine learning models are now capable of predicting supply chain disruptions up to six weeks in advance, giving logistics managers unprecedented time to adapt and re-route resources."
+      },
+      {
+        "type": "blockquote",
+        "text": "The companies that invest in predictive supply chain intelligence today will be the ones that dominate their markets tomorrow."
+      },
+      {
+        "type": "heading",
+        "level": 3,
+        "text": "Real-World Implementation"
+      },
+      {
+        "type": "paragraph",
+        "text": "From warehouse robotics coordination to last-mile delivery optimization, predictive analytics is reshaping every node of the modern supply chain network."
+      }
+    ]
+  },
+  {
+    "id": "3",
+    "slug": "building-scalable-data-platforms",
+    "title": "Building Scalable Data Platforms on Cloud Infrastructure",
+    "author": "Takudzwa Mapfumo",
+    "date": "June 5, 2026",
+    "readingTime": "10 min read",
+    "excerpt": "A technical deep-dive into modern data architecture patterns for enterprises preparing for exponential growth.",
+    "category": "Engineering",
+    "featuredImage": "https://images.unsplash.com/photo-1667984390538-3dea7a3fe33d?w=800&auto=format&fit=crop",
+    "content": [
+      {
+        "type": "paragraph",
+        "text": "As organisations scale, their data infrastructure must evolve from simple monolithic databases to distributed, cloud-native platforms designed for elasticity and resilience."
+      },
+      {
+        "type": "heading",
+        "level": 2,
+        "text": "The Lakehouse Paradigm"
+      },
+      {
+        "type": "paragraph",
+        "text": "The modern data platform combines the best of data lakes and data warehouses into a unified lakehouse architecture, enabling both BI reporting and advanced analytics on a single copy of data."
+      },
+      {
+        "type": "heading",
+        "level": 3,
+        "text": "Key Architectural Pillars"
+      },
+      {
+        "type": "paragraph",
+        "text": "Successful cloud data platforms are built on five key pillars: decoupled storage and compute, open table formats like Apache Iceberg, automated data quality frameworks, comprehensive observability, and well-defined cost governance."
+      },
+      {
+        "type": "blockquote",
+        "text": "Scalability is not just about handling more data — it is about maintaining performance and reliability as the system grows by orders of magnitude."
+      },
+      {
+        "type": "paragraph",
+        "text": "By adopting these patterns, enterprises can reduce data-to-insight latency from weeks to minutes while keeping infrastructure costs predictable."
+      }
+    ]
+  }
+]

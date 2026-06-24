@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pentalogic — Our Team</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+
+<!-- Background layers -->
+<div class="bg-layers" aria-hidden="true">
+  <div class="bg-layer bg-layer--default">
+    <div class="bg-ghost">
+      <img src="assets/images/hero-headset.png" alt="">
+    </div>
+  </div>
+  <div class="bg-layer bg-layer--scroll">
+    <div class="bg-full">
+      <img src="assets/images/hero-headset.png" alt="">
+    </div>
+  </div>
+</div>
+<div class="grid-overlay"></div>
+<div class="grid-spotlight" id="gridSpotlight"></div>
+<div class="vignette"></div>
+
+<div class="page">
+  <!-- Hero -->
+  <section class="hero" id="hero">
+    <nav>
+      <div class="logo">
+        <span class="logo-dot"></span>
+        Pentalogic
+      </div>
+      <button class="nav-cta">Request a quote</button>
+    </nav>
+
+    <div class="hero-grid">
+      <div class="hero-content">
+        <h1 class="fade-up" style="animation-delay:.1s">
+          The <span class="accent">team</span> behind the signal
+        </h1>
+        <p class="sub fade-up" style="animation-delay:.2s">
+          Five specialists, one consultancy. We pair deep technical practice in software, data, and security with the judgement to know which problem actually matters.
+        </p>
+      </div>
+
+      <div class="hero-visual fade-up" style="animation-delay:.25s">
+        <div class="hero-visual-ring" aria-hidden="true"></div>
+        <div class="hero-chart" role="img" aria-label="Team capability radar">
+          <svg viewBox="0 0 400 280" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <rect class="chart-panel" x="8" y="8" width="384" height="264" rx="12"/>
+            <g stroke="rgba(2,245,161,0.14)" stroke-width="1" fill="none">
+              <circle cx="200" cy="140" r="40"/>
+              <circle cx="200" cy="140" r="70"/>
+              <circle cx="200" cy="140" r="100"/>
+            </g>
+            <g stroke="rgba(2,245,161,0.12)" stroke-width="1">
+              <line x1="200" y1="40" x2="200" y2="240"/>
+              <line x1="100" y1="80" x2="300" y2="200"/>
+              <line x1="100" y1="200" x2="300" y2="80"/>
+              <line x1="113" y1="140" x2="287" y2="140"/>
+            </g>
+            <polygon points="200,52 282,98 268,196 154,222 118,118" fill="rgba(2,245,161,0.14)" stroke="var(--accent)" stroke-width="2" stroke-linejoin="round"/>
+            <g fill="var(--accent)">
+              <circle cx="200" cy="52" r="4"/>
+              <circle cx="282" cy="98" r="4"/>
+              <circle cx="268" cy="196" r="4"/>
+              <circle cx="154" cy="222" r="4"/>
+              <circle class="chart-dot--active" cx="118" cy="118" r="5"/>
+            </g>
+            <text x="48" y="34" fill="var(--accent)" font-family="IBM Plex Mono, monospace" font-size="11" font-weight="500">Combined capability</text>
+            <text x="200" y="265" text-anchor="middle" fill="var(--muted-2)" font-family="IBM Plex Mono, monospace" font-size="9" letter-spacing="0.8">5 SPECIALISTS · 1 SIGNAL</text>
+          </svg>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Team intro / stats -->
+  <section class="team-detail">
+    <div class="team-intro fade-up" style="animation-delay:.1s">
+      <h2>Built as a small, senior bench — not a staffing pool.</h2>
+      <div>
+        <p>Every engagement is staffed directly by the five people below. No bench-warming, no unnamed juniors swapped in midway. You always know who's doing the work.</p>
+        <div class="team-stat-row">
+          <div class="team-stat">
+            <span class="team-stat-num">5</span>
+            <span class="team-stat-label">Core specialists</span>
+          </div>
+          <div class="team-stat">
+            <span class="team-stat-num">3</span>
+            <span class="team-stat-label">Disciplines covered</span>
+          </div>
+          <div class="team-stat">
+            <span class="team-stat-num">40+</span>
+            <span class="team-stat-label">Engagements delivered</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Roster -->
+    <div class="roster">
+
+      <!-- Member 01 -->
+      <article class="member fade-up" style="animation-delay:.12s">
+        <span class="member-index">01 / 05</span>
+        <div class="member-avatar" aria-hidden="true">
+          <svg viewBox="0 0 88 88" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="44" cy="44" r="43" fill="none" stroke="rgba(2,245,161,0.18)"/>
+            <g stroke="var(--accent)" stroke-width="2" fill="none" stroke-linecap="round">
+              <line x1="44" y1="14" x2="44" y2="74"/>
+              <line x1="14" y1="44" x2="74" y2="44"/>
+            </g>
+            <circle cx="44" cy="44" r="22" fill="none" stroke="rgba(2,245,161,0.5)" stroke-width="1.5"/>
+            <circle cx="44" cy="22" r="4" fill="var(--accent)"/>
+            <circle cx="44" cy="44" r="3" fill="var(--white)" opacity="0.85"/>
+          </svg>
+        </div>
+        <div class="member-id">
+          <span class="member-name">Tendai Moyo</span>
+          <span class="member-role">Founder &amp; Lead Software Architect</span>
+          <p class="member-bio">Designs the systems everything else runs on. Fourteen years shipping production platforms before turning to consulting full-time.</p>
+          <div class="member-tags">
+            <span class="member-tag">System Design</span>
+            <span class="member-tag">API Architecture</span>
+            <span class="member-tag">Team Leadership</span>
+          </div>
+        </div>
+        <div class="skill-timeline" aria-label="Tendai's skill levels">
+          <div class="skill-row">
+            <span class="skill-name">Backend Engineering</span>
+            <span class="skill-track"><span class="skill-fill" style="--lvl:96%"></span></span>
+            <span class="skill-pct">96%</span>
+          </div>
+          <div class="skill-row">
+            <span class="skill-name">Cloud Architecture</span>
+            <span class="skill-track"><span class="skill-fill" style="--lvl:90%"></span></span>
+            <span class="skill-pct">90%</span>
+          </div>
+          <div class="skill-row">
+            <span class="skill-name">Microservices</span>
+            <span class="skill-track"><span class="skill-fill" style="--lvl:88%"></span></span>
+            <span class="skill-pct">88%</span>
+          </div>
+          <div class="skill-row">
+            <span class="skill-name">Client Strategy</span>
+            <span class="skill-track"><span class="skill-fill" style="--lvl:82%"></span></span>
+            <span class="skill-pct">82%</span>
+          </div>
+        </div>
+      </article>
+
+      <!-- Member 02 -->
+      <article class="member fade-up" style="animation-delay:.16s">
+        <span class="member-index">02 / 05</span>
+        <div class="member-avatar" aria-hidden="true">
+          <svg viewBox="0 0 88 88" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="44" cy="44" r="43" fill="none" stroke="rgba(2,245,161,0.18)"/>
+            <g stroke="var(--accent)" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M20,58 L34,38 L46,50 L60,26 L68,34"/>
+            </g>
+            <g fill="var(--accent)">
+              <circle cx="34" cy="38" r="3"/>
+              <circle cx="46" cy="50" r="3"/>
+              <circle cx="60" cy="26" r="3"/>
+            </g>
+            <circle cx="68" cy="34" r="4" fill="var(--white)" opacity="0.85"/>
+            <line x1="14" y1="64" x2="74" y2="64" stroke="rgba(255,255,255,0.14)" stroke-width="1.5"/>
+          </svg>
+        </div>
+        <div class="member-id">
+          <span class="member-name">Rufaro Chikore</span>
+          <span class="member-role">Head of Data Analytics</span>
+          <p class="member-bio">Turns messy operational data into forecasting models clients actually trust. Background in applied statistics and actuarial modelling.</p>
+          <div class="member-tags">
+            <span class="member-tag">Predictive Modelling</span>
+            <span class="member-tag">Data Pipelines</span>
+            <span class="member-tag">BI Reporting</span>
+          </div>
+        </div>
+        <div class="skill-timeline" aria-label="Rufaro's skill levels">
+          <div class="skill-row">
+            <span class="skill-name">Machine Learning</span>
+            <span class="skill-track"><span class="skill-fill" style="--lvl:93%"></span></span>
+            <span class="skill-pct">93%</span>
+          </div>
+          <div class="skill-row">
+            <span class="skill-name">Statistical Modelling</span>
+            <span class="skill-track"><span class="skill-fill" style="--lvl:95%"></span></span>
+            <span class="skill-pct">95%</span>
+          </div>
+          <div class="skill-row">
+            <span class="skill-name">ETL &amp; Warehousing</span>
+            <span class="skill-track"><span class="skill-fill" style="--lvl:84%"></span></span>
+            <span class="skill-pct">84%</span>
+          </div>
+          <div class="skill-row">
+            <span class="skill-name">Data Visualisation</span>
+            <span class="skill-track"><span class="skill-fill" style="--lvl:89%"></span></span>
+            <span class="skill-pct">89%</span>
+          </div>
+        </div>
+      </article>
+
+      <!-- Member 03 -->
+      <article class="member fade-up" style="animation-delay:.20s">
+        <span class="member-index">03 / 05</span>
+        <div class="member-avatar" aria-hidden="true">
+          <svg viewBox="0 0 88 88" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="44" cy="44" r="43" fill="none" stroke="rgba(2,245,161,0.18)"/>
+            <rect x="24" y="30" width="40" height="30" rx="4" fill="none" stroke="var(--accent)" stroke-width="2"/>
+            <path d="M32,30 v-6 a12,12 0 0 1 24,0 v6" fill="none" stroke="var(--accent)" stroke-width="2"/>
+            <circle cx="44" cy="45" r="4" fill="var(--white)" opacity="0.85"/>
+            <line x1="44" y1="49" x2="44" y2="55" stroke="var(--accent)" stroke-width="2" stroke-linecap="round"/>
+          </svg>
+        </div>
+        <div class="member-id">
+          <span class="member-name">Kudzai Marufu</span>
+          <span class="member-role">Cybersecurity Lead</span>
+          <p class="member-bio">Hardens client infrastructure before attackers find it first. Runs penetration tests, audits, and incident response playbooks.</p>
+          <div class="member-tags">
+            <span class="member-tag">Pen Testing</span>
+            <span class="member-tag">Threat Modelling</span>
+            <span class="member-tag">Compliance</span>
+          </div>
+        </div>
+        <div class="skill-timeline" aria-label="Kudzai's skill levels">
+          <div class="skill-row">
+            <span class="skill-name">Network Security</span>
+            <span class="skill-track"><span class="skill-fill" style="--lvl:94%"></span></span>
+            <span class="skill-pct">94%</span>
+          </div>
+          <div class="skill-row">
+            <span class="skill-name">Penetration Testing</span>
+            <span class="skill-track"><span class="skill-fill" style="--lvl:91%"></span></span>
+            <span class="skill-pct">91%</span>
+          </div>
+          <div class="skill-row">
+            <span class="skill-name">Cloud Security</span>
+            <span class="skill-track"><span class="skill-fill" style="--lvl:86%"></span></span>
+            <span class="skill-pct">86%</span>
+          </div>
+          <div class="skill-row">
+            <span class="skill-name">Incident Response</span>
+            <span class="skill-track"><span class="skill-fill" style="--lvl:88%"></span></span>
+            <span class="skill-pct">88%</span>
+          </div>
+        </div>
+      </article>
+
+      <!-- Member 04 -->
+      <article class="member fade-up" style="animation-delay:.24s">
+        <span class="member-index">04 / 05</span>
+        <div class="member-avatar" aria-hidden="true">
+          <svg viewBox="0 0 88 88" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="44" cy="44" r="43" fill="none" stroke="rgba(2,245,161,0.18)"/>
+            <g fill="none" stroke="var(--accent)" stroke-width="2" stroke-linecap="round">
+              <rect x="20" y="22" width="48" height="32" rx="3"/>
+              <line x1="34" y1="62" x2="54" y2="62"/>
+              <line x1="44" y1="54" x2="44" y2="62"/>
+            </g>
+            <path d="M30,38 l6,6 -6,6" fill="none" stroke="var(--white)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" opacity="0.85"/>
+            <line x1="42" y1="50" x2="58" y2="50" stroke="var(--white)" stroke-width="2" stroke-linecap="round" opacity="0.85"/>
+          </svg>
+        </div>
+        <div class="member-id">
+          <span class="member-name">Farai Dube</span>
+          <span class="member-role">Full-Stack Engineer</span>
+          <p class="member-bio">Builds the products clients actually ship — from MVPs to enterprise platforms. Equally comfortable in the database and the UI.</p>
+          <div class="member-tags">
+            <span class="member-tag">Full-Stack Dev</span>
+            <span class="member-tag">Mobile Apps</span>
+            <span class="member-tag">DevOps</span>
+          </div>
+        </div>
+        <div class="skill-timeline" aria-label="Farai's skill levels">
+          <div class="skill-row">
+            <span class="skill-name">Frontend Dev</span>
+            <span class="skill-track"><span class="skill-fill" style="--lvl:90%"></span></span>
+            <span class="skill-pct">90%</span>
+          </div>
+          <div class="skill-row">
+            <span class="skill-name">Backend Dev</span>
+            <span class="skill-track"><span class="skill-fill" style="--lvl:92%"></span></span>
+            <span class="skill-pct">92%</span>
+          </div>
+          <div class="skill-row">
+            <span class="skill-name">CI/CD &amp; DevOps</span>
+            <span class="skill-track"><span class="skill-fill" style="--lvl:80%"></span></span>
+            <span class="skill-pct">80%</span>
+          </div>
+          <div class="skill-row">
+            <span class="skill-name">Mobile (iOS/Android)</span>
+            <span class="skill-track"><span class="skill-fill" style="--lvl:75%"></span></span>
+            <span class="skill-pct">75%</span>
+          </div>
+        </div>
+      </article>
+
+      <!-- Member 05 -->
+      <article class="member fade-up" style="animation-delay:.28s">
+        <span class="member-index">05 / 05</span>
+        <div class="member-avatar" aria-hidden="true">
+          <svg viewBox="0 0 88 88" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="44" cy="44" r="43" fill="none" stroke="rgba(2,245,161,0.18)"/>
+            <g fill="none" stroke="var(--accent)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M44,18 L66,28 V46 C66,60 56,68 44,72 C32,68 22,60 22,46 V28 Z"/>
+            </g>
+            <path d="M35,45 l7,7 13,-15" fill="none" stroke="var(--white)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" opacity="0.9"/>
+          </svg>
+        </div>
+        <div class="member-id">
+          <span class="member-name">Simba Nyathi</span>
+          <span class="member-role">Project &amp; Client Delivery Manager</span>
+          <p class="member-bio">Keeps five specialists pointed at the same deadline. The person clients call when they need a straight answer, fast.</p>
+          <div class="member-tags">
+            <span class="member-tag">Delivery Management</span>
+            <span class="member-tag">Stakeholder Comms</span>
+            <span class="member-tag">Agile Practice</span>
+          </div>
+        </div>
+        <div class="skill-timeline" aria-label="Simba's skill levels">
+          <div class="skill-row">
+            <span class="skill-name">Project Management</span>
+            <span class="skill-track"><span class="skill-fill" style="--lvl:95%"></span></span>
+            <span class="skill-pct">95%</span>
+          </div>
+          <div class="skill-row">
+            <span class="skill-name">Client Relations</span>
+            <span class="skill-track"><span class="skill-fill" style="--lvl:93%"></span></span>
+            <span class="skill-pct">93%</span>
+          </div>
+          <div class="skill-row">
+            <span class="skill-name">Agile / Scrum</span>
+            <span class="skill-track"><span class="skill-fill" style="--lvl:87%"></span></span>
+            <span class="skill-pct">87%</span>
+          </div>
+          <div class="skill-row">
+            <span class="skill-name">Risk &amp; QA Oversight</span>
+            <span class="skill-track"><span class="skill-fill" style="--lvl:81%"></span></span>
+            <span class="skill-pct">81%</span>
+          </div>
+        </div>
+      </article>
+
+    </div>
+
+    <!-- CTA -->
+    <div class="team-cta fade-up" style="animation-delay:.1s">
+      <div>
+        <h3>Want this team on your problem?</h3>
+        <p>Tell us what you're navigating — we'll tell you honestly whether we're the right five people for it.</p>
+      </div>
+      <button class="btn btn-primary">Book a consultation</button>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer-section">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div class="logo">
+          <span class="logo-dot"></span>
+          Pentalogic
+        </div>
+        <p>Intelligence that sees first. Data, analytics, technology, and predictive intelligence consultancy.</p>
+      </div>
+      <div class="footer-col">
+        <h5>Services</h5>
+        <ul>
+          <li><a href="Services.html">Data Strategy</a></li>
+          <li><a href="Services.html">Predictive Analytics</a></li>
+          <li><a href="Services.html">Data Systems</a></li>
+          <li><a href="Services.html">Custom Software</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h5>Resources</h5>
+        <ul>
+          <li><a href="#">Insights</a></li>
+          <li><a href="#">Case Studies</a></li>
+          <li><a href="#">Blog</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h5>Legal</h5>
+        <ul>
+          <li><a href="#">Privacy Policy</a></li>
+          <li><a href="#">Terms of Service</a></li>
+          <li><a href="#">Cookies</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>&copy; 2026 Pentalogic Consultancy. All rights reserved.</span>
+      <div class="legal-links">
+        <a href="#">Privacy Policy</a>
+        <a href="#">Terms of Service</a>
+      </div>
+    </div>
+  </footer>
+</div>
+
+<script src="assets/js/main.js"></script>
+</body>
+</html>

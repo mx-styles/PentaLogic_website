@@ -1,0 +1,466 @@
+/* ===========================================================
+   Case Studies Page Stylesheet — scoped layouts and interactive widgets
+   =========================================================== */
+
+.case-studies-wrapper {
+  position: relative;
+  width: 100%;
+}
+
+/* ---------- Hero & Visual ---------- */
+.hero-grid {
+  position: relative;
+  z-index: 8;
+  flex: 1;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: 48px;
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 40px 48px 80px;
+}
+
+.hero-content {
+  text-align: left;
+}
+
+.hero-content h1 {
+  font-family: 'Space Grotesk', sans-serif;
+  font-weight: 600;
+  font-size: clamp(36px, 5.2vw, 64px);
+  line-height: 1.12;
+  letter-spacing: -1.2px;
+  margin-bottom: 24px;
+}
+
+.hero-content h1 .accent {
+  color: var(--accent);
+}
+
+.hero-content .sub {
+  color: var(--muted);
+  font-size: clamp(16px, 2vw, 19px);
+  line-height: 1.65;
+  max-width: 540px;
+}
+
+.hero-visual {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero-visual-ring {
+  position: absolute;
+  width: min(420px, 80vw);
+  height: min(420px, 80vw);
+  border: 1px solid rgba(2, 245, 161, 0.15);
+  border-radius: 50%;
+  animation: ring-spin-case 24s linear infinite;
+}
+
+.hero-visual-ring::before {
+  content: '';
+  position: absolute;
+  inset: 18px;
+  border: 1px dashed rgba(2, 245, 161, 0.12);
+  border-radius: 50%;
+}
+
+@keyframes ring-spin-case {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+.hero-chart {
+  width: min(440px, 90vw);
+  filter: drop-shadow(0 24px 48px rgba(2, 245, 161, 0.12));
+  animation: float-visual-case 5s ease-in-out infinite;
+  position: relative;
+  z-index: 2;
+}
+
+.hero-chart svg {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Dashboard SVG styles */
+.dashboard-bg {
+  fill: rgba(7, 25, 30, 0.6);
+  stroke: var(--accent-border);
+  stroke-width: 1;
+}
+
+.dashboard-grid {
+  stroke: rgba(2, 245, 161, 0.12);
+  stroke-width: 1;
+}
+
+.dashboard-ring {
+  stroke: rgba(2, 245, 161, 0.15);
+  stroke-width: 1.5;
+  fill: none;
+}
+
+.dashboard-dial {
+  stroke: var(--accent);
+  stroke-width: 3.5;
+  stroke-dasharray: 280;
+  stroke-dashoffset: 280;
+  stroke-linecap: round;
+  fill: none;
+  animation: draw-dial 2.2s cubic-bezier(.4,0,.2,1) forwards .4s;
+}
+
+.dashboard-needle {
+  transform-box: fill-box;
+  transform-origin: center;
+  animation: move-needle 6s ease-in-out infinite alternate;
+}
+
+.bar-inactive {
+  fill: rgba(255, 255, 255, 0.05);
+}
+
+.bar-active {
+  fill: var(--accent);
+  transform-box: fill-box;
+  transform-origin: bottom;
+  scale: 1 0;
+}
+
+.bar-1 { animation: grow-bar-case 1.5s cubic-bezier(.4,0,.2,1) forwards 1s; }
+.bar-2 { animation: grow-bar-case 1.5s cubic-bezier(.4,0,.2,1) forwards 1.2s; }
+.bar-3 { animation: grow-bar-case 1.5s cubic-bezier(.4,0,.2,1) forwards 1.4s; }
+
+@keyframes float-visual-case {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+@keyframes draw-dial {
+  to { stroke-dashoffset: 70; }
+}
+
+@keyframes move-needle {
+  0% { transform: rotate(-60deg); }
+  100% { transform: rotate(80deg); }
+}
+
+@keyframes grow-bar-case {
+  to { scale: 1 1; }
+}
+
+/* ---------- Case Studies Grid ---------- */
+.case-studies-detail {
+  position: relative;
+  z-index: 5;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 48px 120px;
+}
+
+.section-label {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 20px;
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 11px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: var(--muted-2);
+}
+
+.section-label::before {
+  content: '';
+  width: 24px;
+  height: 1px;
+  background: var(--accent);
+  opacity: 0.8;
+}
+
+.case-studies-detail h2 {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: clamp(28px, 4vw, 42px);
+  font-weight: 600;
+  letter-spacing: -0.5px;
+  margin-bottom: 16px;
+  max-width: 720px;
+}
+
+.case-studies-detail h2 .highlight {
+  display: inline;
+  background: var(--accent);
+  color: var(--onyx-text);
+  padding: 2px 8px;
+  border-radius: 4px;
+  box-decoration-break: clone;
+  -webkit-box-decoration-break: clone;
+}
+
+.case-studies-lead {
+  color: var(--muted);
+  font-size: 16px;
+  line-height: 1.7;
+  max-width: 640px;
+  margin-bottom: 56px;
+}
+
+.case-studies-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 32px;
+}
+
+.case-study-card {
+  position: relative;
+  padding: 32px 32px 36px;
+  border: 1px solid var(--accent-border);
+  border-radius: 4px;
+  background: rgba(7, 25, 30, 0.55);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  transition: border-color .25s ease, transform .25s ease, box-shadow .25s ease;
+}
+
+.case-study-card:hover {
+  border-color: rgba(2, 245, 161, 0.45);
+  transform: translateY(-6px) scale(1.02);
+  box-shadow: 0 16px 40px rgba(2, 245, 161, 0.12);
+}
+
+.spotlight-glow {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle 200px at var(--mouse-x, 50%) var(--mouse-y, 50%), rgba(2, 245, 161, 0.08), transparent 75%);
+  opacity: 0;
+  transition: opacity .3s ease;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.case-study-card:hover .spotlight-glow {
+  opacity: 1;
+}
+
+.card-header-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+  position: relative;
+  z-index: 2;
+}
+
+.sector-tag {
+  display: inline-block;
+  padding: 4px 10px;
+  border-radius: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  background: rgba(255, 255, 255, 0.03);
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 10px;
+  color: var(--muted);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.case-study-card h3 {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 22px;
+  font-weight: 600;
+  letter-spacing: -0.2px;
+  color: var(--white);
+  margin-bottom: 16px;
+  position: relative;
+  z-index: 2;
+}
+
+.case-study-sections {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-bottom: 28px;
+  flex: 1;
+  position: relative;
+  z-index: 2;
+}
+
+.case-section h4 {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: var(--accent);
+  margin-bottom: 6px;
+}
+
+.case-section p {
+  font-size: 14px;
+  line-height: 1.55;
+  color: var(--muted);
+}
+
+.metric-box {
+  margin-top: auto;
+  padding-top: 24px;
+  border-top: 1px solid rgba(2, 245, 161, 0.12);
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  position: relative;
+  z-index: 2;
+}
+
+.metric-num {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: clamp(24px, 2.5vw, 30px);
+  font-weight: 700;
+  letter-spacing: -0.5px;
+  color: var(--accent);
+}
+
+.metric-label {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: var(--muted-2);
+}
+
+/* ---------- Consultation Banner ---------- */
+.consultation-banner {
+  margin-top: 80px;
+  padding: 48px;
+  border: 1px solid var(--accent-border);
+  border-radius: 4px;
+  background: 
+    linear-gradient(160deg, rgba(2, 245, 161, 0.08), rgba(2, 245, 161, 0.02)),
+    rgba(7, 25, 30, 0.45);
+  box-shadow: 0 20px 48px rgba(2, 245, 161, 0.06);
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  gap: 40px;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.consultation-content h3 {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 26px;
+  font-weight: 600;
+  letter-spacing: -0.3px;
+  margin-bottom: 12px;
+}
+
+.consultation-content p {
+  color: var(--muted);
+  font-size: 15px;
+  line-height: 1.6;
+  max-width: 560px;
+}
+
+.consultation-action {
+  justify-self: end;
+}
+
+.btn-primary {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 13px 26px;
+  background: var(--accent);
+  color: var(--onyx-text);
+  border: none;
+  border-radius: 4px;
+  font-weight: 500;
+  font-size: 14.5px;
+  text-decoration: none;
+  cursor: pointer;
+  transition: transform .2s ease, box-shadow .2s ease;
+}
+
+.btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(2, 245, 161, 0.25);
+}
+
+/* ---------- Responsive ---------- */
+@media (max-width: 960px) {
+  .hero-grid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+    padding: 40px 32px 60px;
+    text-align: center;
+  }
+  
+  .hero-content {
+    text-align: center;
+  }
+  
+  .hero-content .sub {
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  .hero-visual-ring {
+    width: min(320px, 75vw);
+    height: min(320px, 75vw);
+  }
+  
+  .hero-chart {
+    width: min(320px, 80vw);
+  }
+
+  .case-studies-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+  }
+  
+  .consultation-banner {
+    grid-template-columns: 1fr;
+    gap: 24px;
+    padding: 36px;
+  }
+  
+  .consultation-action {
+    justify-self: start;
+  }
+}
+
+@media (max-width: 820px) {
+  .case-studies-detail {
+    padding: 0 24px 100px;
+  }
+  
+  .case-studies-lead {
+    margin-bottom: 40px;
+  }
+}
+
+@media (max-width: 600px) {
+  .case-studies-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ---------- Reduced Motion ---------- */
+@media (prefers-reduced-motion: reduce) {
+  .hero-visual-ring { animation: none; }
+  .hero-chart { animation: none; }
+  .dashboard-dial { animation: none; stroke-dashoffset: 70; }
+  .dashboard-needle { animation: none; }
+  .bar-active { animation: none; scale: 1 1; }
+  .case-study-card { transition: none; }
+  .spotlight-glow { transition: none; }
+  .btn-primary { transition: none; }
+}

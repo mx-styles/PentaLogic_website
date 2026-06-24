@@ -1,0 +1,194 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap');
+
+:root{
+  --bg:#07191E;
+  --accent:#02F5A1;
+  --accent-soft:rgba(2,245,161,0.12);
+  --accent-border:rgba(2,245,161,0.28);
+  --white:#FFFFFF;
+  --muted:rgba(255,255,255,0.62);
+  --muted-2:rgba(255,255,255,0.38);
+  --onyx-text:#07191E;
+}
+
+*{margin:0;padding:0;box-sizing:border-box;}
+
+html,body{
+  background:var(--bg);
+  color:var(--white);
+  font-family:'Inter',sans-serif;
+  -webkit-font-smoothing:antialiased;
+}
+
+html{scroll-behavior:smooth;}
+
+@media (prefers-reduced-motion: reduce){
+  html{scroll-behavior:auto;}
+}
+
+/* ---------- fixed background layers (swap on scroll) ---------- */
+.bg-layers{
+  position:fixed;
+  inset:0;
+  z-index:0;
+  pointer-events:none;
+}
+
+.bg-layer{
+  position:absolute;
+  inset:0;
+  transition:opacity .7s cubic-bezier(.4,0,.2,1);
+}
+
+.bg-layer--default{
+  background:var(--bg);
+  opacity:1;
+}
+
+.bg-layer--default .bg-ghost{
+  position:absolute;
+  inset:0;
+  display:flex;
+  justify-content:center;
+  align-items:flex-start;
+  overflow:hidden;
+}
+
+.bg-layer--default .bg-ghost img{
+  width:min(880px, 72vw);
+  height:auto;
+  margin-top:2vh;
+  object-fit:contain;
+  opacity:0.1;
+  mix-blend-mode:screen;
+  filter:saturate(0.85) brightness(1.05);
+  -webkit-mask-image:radial-gradient(ellipse 58% 52% at 50% 34%, black 35%, transparent 85%);
+  mask-image:radial-gradient(ellipse 58% 52% at 50% 34%, black 35%, transparent 85%);
+}
+
+.bg-layer--scroll{
+  opacity:0;
+  background:
+    radial-gradient(ellipse 80% 70% at 50% 40%, rgba(2,245,161,0.08), transparent 65%),
+    var(--bg);
+}
+
+.bg-layer--scroll .bg-full{
+  position:absolute;
+  inset:0;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  overflow:hidden;
+}
+
+.bg-layer--scroll .bg-full img{
+  width:min(1100px, 90vw);
+  height:auto;
+  object-fit:contain;
+  opacity:0.55;
+  filter:saturate(1.1) brightness(1.08);
+  -webkit-mask-image:radial-gradient(ellipse 70% 65% at 50% 45%, black 30%, transparent 88%);
+  mask-image:radial-gradient(ellipse 70% 65% at 50% 45%, black 30%, transparent 88%);
+}
+
+body.scrolled .bg-layer--default{opacity:0;}
+body.scrolled .bg-layer--scroll{opacity:1;}
+
+.bg-layer--about{
+  opacity:0;
+  background:
+    radial-gradient(ellipse 75% 65% at 50% 42%, rgba(2,245,161,0.06), transparent 68%),
+    var(--bg);
+}
+
+.bg-layer--about .bg-about{
+  position:absolute;
+  inset:0;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  overflow:hidden;
+}
+
+.bg-layer--about .bg-about img{
+  width:min(720px, 65vw);
+  height:auto;
+  object-fit:contain;
+  opacity:0.48;
+  mix-blend-mode:screen;
+  filter:hue-rotate(88deg) saturate(1.15) brightness(1.05);
+  -webkit-mask-image:radial-gradient(ellipse 62% 72% at 50% 46%, black 28%, transparent 90%);
+  mask-image:radial-gradient(ellipse 62% 72% at 50% 46%, black 28%, transparent 90%);
+}
+
+body.at-about .bg-layer--scroll{opacity:0;}
+body.at-about .bg-layer--about{opacity:1;}
+
+/* ---------- grid overlay ---------- */
+.grid-overlay{
+  position:fixed;
+  inset:0;
+  background-image:
+    linear-gradient(to right, rgba(2,245,161,0.07) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(2,245,161,0.07) 1px, transparent 1px);
+  background-size:60px 60px;
+  -webkit-mask-image:radial-gradient(ellipse 85% 70% at 50% 28%, black 35%, transparent 92%);
+  mask-image:radial-gradient(ellipse 85% 70% at 50% 28%, black 35%, transparent 92%);
+  pointer-events:none;
+  z-index:2;
+}
+
+.grid-spotlight{
+  position:fixed;
+  inset:0;
+  background-image:
+    radial-gradient(circle 240px at var(--mx,50%) var(--my,-20%), rgba(2,245,161,0.18), transparent 70%),
+    linear-gradient(to right, rgba(2,245,161,0.4) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(2,245,161,0.4) 1px, transparent 1px);
+  background-size:100% 100%, 60px 60px, 60px 60px;
+  -webkit-mask-image:radial-gradient(circle 240px at var(--mx,50%) var(--my,-20%), black 0%, transparent 78%);
+  mask-image:radial-gradient(circle 240px at var(--mx,50%) var(--my,-20%), black 0%, transparent 78%);
+  pointer-events:none;
+  z-index:2;
+  opacity:0;
+  transition:opacity .5s ease;
+}
+
+.vignette{
+  position:fixed;
+  inset:0;
+  background:radial-gradient(ellipse 70% 60% at 50% 22%, rgba(2,245,161,0.05), transparent 70%);
+  pointer-events:none;
+  z-index:3;
+}
+
+/* ---------- page shell ---------- */
+.page{
+  position:relative;
+  z-index:5;
+}
+
+.hero{
+  position:relative;
+  min-height:100vh;
+  width:100%;
+  display:flex;
+  flex-direction:column;
+}
+
+/* nav component styles removed to avoid clashes with Navbar.css */
+
+/* ---------- responsive ---------- */
+@media (max-width: 960px){
+  .hero-content{padding:40px 32px 60px;}
+  .services-detail{padding:40px 32px 80px;}
+}
+
+@media (max-width: 480px){
+  .hero-content{padding:16px 20px 40px;}
+  .services-detail{padding:24px 20px 60px;}
+}
+
+/* Services page specific overrides moved to ServicesOverview.css */
+
