@@ -8,8 +8,7 @@ export default function Footer() {
       <div className="footer-grid">
         <div className="footer-brand">
           <Link to="/" className="logo">
-            <span class="logo-dot"></span>
-            Pentalogic
+            <img src="/assets/images/logo.png" alt="Pentalogic" className="logo-img" />
           </Link>
           <p>Intelligence that sees first. Data, analytics, technology, and predictive intelligence consultancy.</p>
         </div>

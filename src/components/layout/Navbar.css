@@ -32,29 +32,15 @@
   display: flex;
   align-items: center;
   gap: 10px;
-  font-family: 'Space Grotesk', sans-serif;
-  font-weight: 600;
-  font-size: 18px;
-  letter-spacing: 0.2px;
-  color: var(--white);
   text-decoration: none;
   flex-shrink: 0;
   z-index: 20;
 }
 
-.logo-dot {
-  width: 8px;
-  height: 8px;
-  border-radius: 50%;
-  background: var(--accent);
-  box-shadow: 0 0 0 0 rgba(2, 245, 161, 0.6);
-  animation: pulse-dot 2.6s ease-out infinite;
-}
-
-@keyframes pulse-dot {
-  0% { box-shadow: 0 0 0 0 rgba(2, 245, 161, 0.55); }
-  70% { box-shadow: 0 0 0 8px rgba(2, 245, 161, 0); }
-  100% { box-shadow: 0 0 0 0 rgba(2, 245, 161, 0); }
+.logo-img {
+  height: 36px;
+  width: auto;
+  display: block;
 }
 
 /* ---------- Desktop Links & Active States ---------- */

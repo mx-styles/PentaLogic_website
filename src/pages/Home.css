@@ -670,7 +670,7 @@ h1 .accent {
 @keyframes fadeUp { to { opacity: 1; transform: translateY(0); } }
 
 @media (prefers-reduced-motion: reduce) {
-  .logo-dot, .signal .bars span, .fade-up, .hero-chart, .hero-visual-ring, .scroll-hint .arrow, .chart-line, .chart-area, .chart-dot--active {
+  .signal .bars span, .fade-up, .hero-chart, .hero-visual-ring, .scroll-hint .arrow, .chart-line, .chart-area, .chart-dot--active {
     animation: none !important;
   }
   .fade-up { opacity: 1; transform: none; }

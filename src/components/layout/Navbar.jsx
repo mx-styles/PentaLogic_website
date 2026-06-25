@@ -45,8 +45,7 @@ export default function Navbar() {
     <header className={`nav-wrapper ${isScrolled ? 'scrolled' : ''}`}>
       <nav className="nav-container">
         <Link to="/" className="logo" onClick={closeMenu}>
-          <span className="logo-dot"></span>
-          Pentalogic
+          <img src="/assets/images/logo.png" alt="Pentalogic" className="logo-img" />
         </Link>
 
         {/* Desktop Links */}
