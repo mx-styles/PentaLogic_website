@@ -697,6 +697,7 @@ h1 .accent {
   .about-grid { grid-template-columns: 1fr; gap: 40px; }
   .about-values { grid-template-columns: repeat(2, 1fr); }
   .services-grid { grid-template-columns: repeat(2, 1fr); }
+  .contact-grid { grid-template-columns: 1fr; gap: 40px; }
 }
 
 @media (max-width: 820px) {
@@ -712,6 +713,10 @@ h1 .accent {
 @media (max-width: 600px) {
   .services-grid { grid-template-columns: 1fr; }
   .service-card { padding: 28px 20px; }
+  .contact-form .btn {
+    align-self: stretch;
+    width: 100%;
+  }
 }
 
 @media (max-width: 480px) {
