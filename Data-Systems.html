@@ -13,6 +13,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="assets/css/styles.css">
+  <script src="https://unpkg.com/lucide@latest"></script>
 </head>
 <body>
 
@@ -81,17 +82,17 @@
 
       <div class="about-values">
         <div class="about-value">
-          <span class="about-value-num">☁️</span>
+          <span class="about-value-num" aria-hidden="true"><i data-lucide="cloud"></i></span>
           <p class="about-value-label">Cloud Native</p>
           <p class="about-value-desc">Scalable and cost-efficient platform design.</p>
         </div>
         <div class="about-value">
-          <span class="about-value-num">🔄</span>
+          <span class="about-value-num" aria-hidden="true"><i data-lucide="refresh-cw"></i></span>
           <p class="about-value-label">Reliable Pipelines</p>
           <p class="about-value-desc">Ingest, transform, and load with observability.</p>
         </div>
         <div class="about-value">
-          <span class="about-value-num">✅</span>
+          <span class="about-value-num" aria-hidden="true"><i data-lucide="circle-check"></i></span>
           <p class="about-value-label">Data Quality</p>
           <p class="about-value-desc">Automated checks keeping data trustworthy.</p>
         </div>
@@ -141,5 +142,6 @@
 </div>
 
 <script src="assets/js/main.js"></script>
+<script>lucide.createIcons();</script>
 </body>
 </html>

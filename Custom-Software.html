@@ -13,6 +13,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="assets/css/styles.css">
+  <script src="https://unpkg.com/lucide@latest"></script>
 </head>
 <body>
 
@@ -81,17 +82,17 @@
 
       <div class="about-values">
         <div class="about-value">
-          <span class="about-value-num">🌐</span>
+          <span class="about-value-num" aria-hidden="true"><i data-lucide="globe"></i></span>
           <p class="about-value-label">Web Apps</p>
           <p class="about-value-desc">High-performance responsive applications.</p>
         </div>
         <div class="about-value">
-          <span class="about-value-num">🔧</span>
+          <span class="about-value-num" aria-hidden="true"><i data-lucide="wrench"></i></span>
           <p class="about-value-label">Internal Tools</p>
           <p class="about-value-desc">Removing manual work and reducing error.</p>
         </div>
         <div class="about-value">
-          <span class="about-value-num">🔌</span>
+          <span class="about-value-num" aria-hidden="true"><i data-lucide="plug"></i></span>
           <p class="about-value-label">Integrations</p>
           <p class="about-value-desc">Connecting your systems seamlessly.</p>
         </div>
@@ -141,5 +142,6 @@
 </div>
 
 <script src="assets/js/main.js"></script>
+<script>lucide.createIcons();</script>
 </body>
 </html>

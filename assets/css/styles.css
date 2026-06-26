@@ -618,13 +618,17 @@ h1 .accent{
 }
 
 .about-value-num{
-  display:block;
-  font-family:'Space Grotesk',sans-serif;
-  font-size:clamp(28px, 3vw, 36px);
-  font-weight:600;
-  letter-spacing:-0.5px;
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
   color:var(--accent);
   margin-bottom:8px;
+}
+
+.about-value-num svg{
+  width:32px;
+  height:32px;
+  stroke-width:1.8;
 }
 
 .about-value-label{
@@ -1343,4 +1347,3 @@ body.scrolled .scroll-hint{opacity:0; pointer-events:none;}
   gap:16px;
   border-bottom-color:var(--accent);
 }
-
