@@ -6,7 +6,7 @@
   width: 100%;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
   margin-top: 80px;
 }
 
@@ -21,10 +21,11 @@
   max-width: 1200px;
   width: 100%;
   margin: 0 auto;
-  padding: 40px 48px 80px;
+  padding: 120px 48px 80px;
 }
 
 .hero-text {
+  
   text-align: left;
 }
 
@@ -684,7 +685,7 @@ h1 .accent {
   .hero-grid {
     grid-template-columns: 1fr;
     gap: 40px;
-    padding: 24px 32px 72px;
+    padding: 100px 32px 72px;
     text-align: center;
   }
   .hero-text { text-align: center; }
@@ -722,5 +723,5 @@ h1 .accent {
 @media (max-width: 480px) {
   .sub { font-size: 15px; }
   .btn { padding: 13px 22px; font-size: 14px; }
-  .hero-grid { padding: 16px 20px 64px; }
+  .hero-grid { padding: 80px 20px 64px; }
 }
