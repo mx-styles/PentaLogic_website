@@ -25,7 +25,6 @@ agent_session.log
 node_modules/
 jspm_packages/
 web_modules/
-dist/
 build/
 out/
 .docusaurus/

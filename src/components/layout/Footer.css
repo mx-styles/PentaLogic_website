@@ -18,11 +18,15 @@
 }
 
 .footer-brand .logo {
-  font-size: 18px;
   margin-bottom: 12px;
   text-decoration: none;
-  color: var(--white);
   display: inline-flex;
+}
+
+.footer-brand .logo-img {
+  height: 32px;
+  width: auto;
+  display: block;
 }
 
 .footer-brand p {
